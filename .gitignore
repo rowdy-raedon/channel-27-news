@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 .remember/
+.playwright-mcp/
+fb-snapshot*.txt
+fb-page-snapshot.txt
