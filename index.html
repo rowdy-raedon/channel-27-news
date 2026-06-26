@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Channel 27 News & Entertainment — Your Source For News & Entertainment. Covering Marion, Grant County and beyond with breaking news, sports, entertainment, and community stories.">
+  <meta name="description" content="Channel 27 News & Entertainment — Grant County's source for breaking news, crime, public safety, and community updates. Watch live, follow our Facebook feed, and stay informed.">
   <meta name="theme-color" content="#0d0d0d">
   <meta property="og:title" content="Channel 27 News & Entertainment">
-  <meta property="og:description" content="Your Source For News & Entertainment — Grant County's trusted local news station.">
+  <meta property="og:description" content="Grant County's trusted local news. Breaking updates, live video, and community coverage.">
   <meta property="og:image" content="image/channel27-logo.png">
   <meta property="og:url" content="https://channel27news.com">
   <meta name="twitter:card" content="summary_large_image">
-
-  <title>Channel 27 News & Entertainment — Your Source For News & Entertainment</title>
-
+  <title>Channel 27 News & Entertainment — Grant County</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════ 1. TOPBAR ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ TOPBAR ═══════════ -->
   <div class="topbar">
     <div class="container">
       <div class="topbar-inner">
         <div class="topbar-left">
           <span id="topbar-date" class="topbar-date"></span>
-          <span class="topbar-separator">|</span>
-          <a href="#schedule" class="topbar-link"><i class="fas fa-calendar-alt"></i> Schedule</a>
-          <span class="topbar-separator">|</span>
-          <a href="#watch" class="topbar-link live-link"><span class="live-dot"></span> Watch Live</a>
+          <span class="topbar-sep">|</span>
+          <a href="#live" class="topbar-link live-link"><span class="live-dot"></span> Watch Live</a>
+          <span class="topbar-sep">|</span>
+          <a href="#schedule" class="topbar-link"><i class="fas fa-calendar-alt"></i> On Air Schedule</a>
         </div>
         <div class="topbar-right">
           <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="topbar-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -44,12 +42,12 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════ 2. HEADER ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ HEADER ═══════════ -->
   <header class="site-header">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-3 text-center text-md-start">
-          <a href="/"><img src="image/channel27-logo.png" alt="Channel 27 News Logo" class="header-logo" height="64"></a>
+          <a href="/"><img src="image/channel27-logo.png" alt="Channel 27 News" class="header-logo" height="64"></a>
         </div>
         <div class="col-md-6 text-center d-none d-md-block">
           <p class="header-tagline">YOUR SOURCE FOR NEWS &amp; ENTERTAINMENT</p>
@@ -58,15 +56,15 @@
           <div class="header-contact">
             <i class="fas fa-envelope header-contact-icon"></i>
             <div>
-              <span class="header-contact-label">Contact Us</span>
-              <span class="header-contact-value">[CLIENT TO PROVIDE EMAIL]</span>
+              <span class="header-contact-label">News Tip?</span>
+              <span class="header-contact-value">Message us on Facebook</span>
             </div>
           </div>
           <div class="header-contact">
             <i class="fas fa-phone header-contact-icon"></i>
             <div>
-              <span class="header-contact-label">Phone</span>
-              <span class="header-contact-value">[CLIENT TO PROVIDE PHONE]</span>
+              <span class="header-contact-label">Advertise</span>
+              <span class="header-contact-value">Become a sponsor</span>
             </div>
           </div>
         </div>
@@ -74,24 +72,22 @@
     </div>
   </header>
 
-  <!-- ═══════════════════════════════════════════════ 3. NAVBAR ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-lg-none" href="/"><img src="image/channel27-logo.png" alt="Channel 27" height="44"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">
+      <a class="navbar-brand d-lg-none" href="/"><img src="image/channel27-logo.png" alt="Channel 27" height="40"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
-          <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
-          <li class="nav-item"><a class="nav-link" href="#watch">Videos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#community">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item"><a class="nav-link nav-live" href="#watch"><span class="live-dot"></span> Watch Live</a></li>
+          <li class="nav-item"><a class="nav-link" href="#live">Watch Live</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feed">Latest News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">On Air</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sponsor">Sponsors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-live" href="#live"><span class="live-dot"></span> Live</a></li>
         </ul>
         <div class="navbar-social d-none d-lg-flex">
           <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -100,7 +96,7 @@
         </div>
         <form class="navbar-search d-none d-lg-flex ms-3" role="search">
           <div class="input-group input-group-sm">
-            <input class="form-control" type="search" placeholder="Search news..." aria-label="Search">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
             <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
           </div>
         </form>
@@ -109,628 +105,194 @@
   </nav>
 
   <!-- Offcanvas Mobile Menu -->
-  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileNav">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="mobileNavLabel">Channel 27</h5>
+      <h5 class="offcanvas-title font-bebas">Channel 27</h5>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
-        <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
-        <li class="nav-item"><a class="nav-link" href="#watch">Videos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#community">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        <li class="nav-item"><a class="nav-link nav-live" href="#watch"><span class="live-dot"></span> Watch Live</a></li>
+        <li class="nav-item"><a class="nav-link" href="#live">Watch Live</a></li>
+        <li class="nav-item"><a class="nav-link" href="#feed">Latest News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">On Air</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponsor">Sponsors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <form class="mt-3" role="search">
-        <div class="input-group">
-          <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-          <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
-        </div>
-      </form>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════ 4. BREAKING NEWS TICKER ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ BREAKING NEWS TICKER ═══════════ -->
   <div class="breaking-ticker">
     <div class="container d-flex align-items-center">
       <span class="breaking-pill">🔴 BREAKING</span>
       <div class="ticker-wrap">
-        <div class="ticker-text">
-          <span class="ticker-item">[CLIENT TO PROVIDE — Top breaking headline]</span>
+        <div class="ticker-text" id="tickerText">
+          <span class="ticker-item">🚨 Leland James Smith Sr. remains in custody on child molestation charges — being transferred to Fulton County Jail</span>
           <span class="ticker-sep">◆</span>
-          <span class="ticker-item">TONIGHT AT 10: [CLIENT TO PROVIDE — Show promo]</span>
+          <span class="ticker-item">Follow Channel 27 on Facebook for live updates and breaking news alerts</span>
           <span class="ticker-sep">◆</span>
-          <span class="ticker-item">WEATHER ALERT: [CLIENT TO PROVIDE — Forecast]</span>
-          <span class="ticker-sep">◆</span>
-          <span class="ticker-item">Follow Channel 27 on Facebook for live updates</span>
+          <span class="ticker-item">Have a news tip? Message us on Facebook — we verify every report</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════ 5. HERO CAROUSEL ═══════════════════════════════════════════════ -->
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img src="image/banner.jpg" class="d-block w-100 hero-img" alt="Channel 27 News Studio">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption">
-          <span class="badge badge-breaking mb-2">🔴 BREAKING NEWS</span>
-          <h1>CHANNEL <span class="text-gold">27</span> NEWS</h1>
-          <p class="hero-lead">[CLIENT TO PROVIDE — Top headline or station promo]</p>
-          <a href="#" class="btn btn-outline-light rounded-0 px-4">READ MORE <i class="fas fa-arrow-right ms-2"></i></a>
+  <!-- ═══════════ HERO — LIVE VIDEO ═══════════ -->
+  <section id="live" class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="video-container">
+            <span class="video-live-badge"><span class="live-dot"></span> LIVE</span>
+            <div class="video-16x9">
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/tysonmediaoutlet/videos/372856174039591/&show_text=false" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <img src="image/1.jpg" class="d-block w-100 hero-img" alt="Entertainment">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption">
-          <span class="badge badge-entertainment mb-2">ENTERTAINMENT</span>
-          <h1>LATEST <span class="text-gold">ENTERTAINMENT</span></h1>
-          <p class="hero-lead">[CLIENT TO PROVIDE — Entertainment headline]</p>
-          <a href="#" class="btn btn-outline-light rounded-0 px-4">READ MORE <i class="fas fa-arrow-right ms-2"></i></a>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <img src="image/2.jpg" class="d-block w-100 hero-img" alt="Sports">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption">
-          <span class="badge badge-sports mb-2">SPORTS</span>
-          <h1>TOP <span class="text-gold">SPORTS</span> COVERAGE</h1>
-          <p class="hero-lead">[CLIENT TO PROVIDE — Sports headline]</p>
-          <a href="#" class="btn btn-outline-light rounded-0 px-4">READ MORE <i class="fas fa-arrow-right ms-2"></i></a>
+        <div class="col-lg-4">
+          <div class="hero-sidebar">
+            <div class="hero-now-on">
+              <span class="text-red fw-bold text-uppercase small">Now Playing</span>
+              <h3 class="font-bebas text-white mt-1 mb-3">CHANNEL 27 LIVE</h3>
+              <p class="text-light-gray small">Grant County's source for breaking news, crime updates, and community coverage. Watch live broadcasts and stay informed.</p>
+            </div>
+            <div class="hero-sponsor">
+              <span class="text-gold text-uppercase small fw-bold">Sponsored By</span>
+              <p class="text-white mb-1 fw-bold">Chuck's Sewer Drain &amp; Plumbing</p>
+              <p class="text-light-gray" style="font-size:0.7rem;">Proud supporter of local news</p>
+              <a href="#sponsor" class="btn btn-gold btn-sm rounded-0 mt-2">Become a Sponsor</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  </section>
 
-  <!-- ═══════════════════════════════════════════════ 6. MAIN CONTENT + SIDEBAR ═══════════════════════════════════════════════ -->
-  <div class="main-content py-5">
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <section id="feed" class="main-section">
     <div class="container">
       <div class="row">
 
-        <!-- ── 6A. LEFT COLUMN ── -->
+        <!-- LEFT: Facebook Feed -->
         <div class="col-lg-8">
+          <div class="section-label">
+            <span>📰 LATEST FROM CHANNEL 27</span>
+            <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="section-label-link">View on Facebook <i class="fas fa-external-link-alt ms-1"></i></a>
+          </div>
 
-          <!-- Featured News Tabs -->
-          <section class="section-header mb-0">
-            <span>FEATURED NEWS</span>
-          </section>
-          <div class="card featured-tabs-card">
-            <div class="card-body p-0">
-              <ul class="nav nav-tabs featured-tabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-all" type="button" role="tab">All</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-trending" type="button" role="tab">Trending</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-popular" type="button" role="tab">Popular</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-latest" type="button" role="tab">Latest</button>
-                </li>
-              </ul>
-              <div class="tab-content p-0">
-                <!-- All Tab -->
-                <div class="tab-pane fade show active" id="tab-all" role="tabpanel">
-                  <div id="featuredCarouselAll" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="image/4.jpg" class="d-block w-100 featured-img" alt="Featured Story">
-                        <div class="featured-caption">
-                          <span class="badge badge-breaking">Breaking</span>
-                          <h3>BREAKING NEWS HEADLINE GOES HERE</h3>
-                          <div class="featured-byline">
-                            <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                            <span>Channel 27 Staff</span>
-                            <span class="byline-date">— June 26, 2025</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="image/5.jpg" class="d-block w-100 featured-img" alt="Featured Story">
-                        <div class="featured-caption">
-                          <span class="badge badge-entertainment">Entertainment</span>
-                          <h3>ENTERTAINMENT HEADLINE HERE</h3>
-                          <div class="featured-byline">
-                            <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                            <span>Channel 27 Staff</span>
-                            <span class="byline-date">— June 26, 2025</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarouselAll" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#featuredCarouselAll" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </div>
-                <!-- Trending Tab -->
-                <div class="tab-pane fade" id="tab-trending" role="tabpanel">
-                  <div class="p-3 text-center text-muted">[CLIENT TO PROVIDE — Trending stories]</div>
-                </div>
-                <!-- Popular Tab -->
-                <div class="tab-pane fade" id="tab-popular" role="tabpanel">
-                  <div class="p-3 text-center text-muted">[CLIENT TO PROVIDE — Popular stories]</div>
-                </div>
-                <!-- Latest Tab -->
-                <div class="tab-pane fade" id="tab-latest" role="tabpanel">
-                  <div class="p-3 text-center text-muted">[CLIENT TO PROVIDE — Latest stories]</div>
-                </div>
+          <!-- Featured Post Embed -->
+          <div class="fb-post-card mb-4">
+            <div class="fb-post-header">
+              <img src="image/channel27-logo.png" alt="Channel 27" height="32">
+              <div>
+                <strong class="text-white">Channel 27 News and Entertainment</strong>
+                <span class="text-light-gray" style="font-size:0.7rem;display:block;">Grant County</span>
               </div>
+            </div>
+            <div class="fb-post-embed">
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l&show_text=true&width=500" width="100%" style="border:none;overflow:hidden;min-height:400px;" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
             </div>
           </div>
 
-          <!-- News Card Grid -->
-          <div class="row mt-4 g-3">
-            <!-- Card 1 — Breaking -->
-            <div class="col-md-6">
-              <div class="card news-card">
-                <div class="news-card-img-wrap">
-                  <img src="image/10.jpg" class="card-img-top" alt="News Story">
-                  <span class="badge badge-breaking news-card-badge">Breaking</span>
-                  <div class="news-card-share">
-                    <a href="#" class="share-circle share-fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="share-circle share-x" title="Share on X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="share-circle share-ig" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="share-circle share-plus" title="More"><i class="fas fa-plus"></i></a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <span class="card-date">June 26, 2025</span>
-                  <h5 class="card-headline">BREAKING STORY HEADLINE FOR CARD ONE</h5>
-                  <p class="card-excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-2">
-                    <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                    <span class="byline-name">Channel 27 Staff</span>
-                  </div>
-                  <div class="card-stats">
-                    <span><i class="far fa-eye"></i> 1.2k</span>
-                    <span><i class="far fa-heart"></i> 342</span>
-                    <span><i class="far fa-comment"></i> 56</span>
-                  </div>
-                </div>
-              </div>
+          <!-- Full Timeline Feed -->
+          <div class="fb-timeline-card">
+            <div class="section-label mb-0">
+              <span>📱 FULL TIMELINE</span>
             </div>
-            <!-- Card 2 — Entertainment -->
-            <div class="col-md-6">
-              <div class="card news-card">
-                <div class="news-card-img-wrap">
-                  <img src="image/11.jpg" class="card-img-top" alt="Entertainment">
-                  <span class="badge badge-entertainment news-card-badge">Entertainment</span>
-                  <div class="news-card-share">
-                    <a href="#" class="share-circle share-fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="share-circle share-x" title="Share on X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="share-circle share-ig" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="share-circle share-plus" title="More"><i class="fas fa-plus"></i></a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <span class="card-date">June 25, 2025</span>
-                  <h5 class="card-headline">ENTERTAINMENT HEADLINE FOR CARD TWO</h5>
-                  <p class="card-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-2">
-                    <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                    <span class="byline-name">Channel 27 Staff</span>
-                  </div>
-                  <div class="card-stats">
-                    <span><i class="far fa-eye"></i> 856</span>
-                    <span><i class="far fa-heart"></i> 198</span>
-                    <span><i class="far fa-comment"></i> 23</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card 3 — Sports -->
-            <div class="col-md-6">
-              <div class="card news-card">
-                <div class="news-card-img-wrap">
-                  <img src="image/12.jpg" class="card-img-top" alt="Sports">
-                  <span class="badge badge-sports news-card-badge">Sports</span>
-                  <div class="news-card-share">
-                    <a href="#" class="share-circle share-fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="share-circle share-x" title="Share on X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="share-circle share-ig" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="share-circle share-plus" title="More"><i class="fas fa-plus"></i></a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <span class="card-date">June 24, 2025</span>
-                  <h5 class="card-headline">SPORTS HEADLINE FOR CARD THREE</h5>
-                  <p class="card-excerpt">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-2">
-                    <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                    <span class="byline-name">Channel 27 Staff</span>
-                  </div>
-                  <div class="card-stats">
-                    <span><i class="far fa-eye"></i> 2.1k</span>
-                    <span><i class="far fa-heart"></i> 487</span>
-                    <span><i class="far fa-comment"></i> 92</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card 4 — Community -->
-            <div class="col-md-6">
-              <div class="card news-card">
-                <div class="news-card-img-wrap">
-                  <img src="image/13.jpg" class="card-img-top" alt="Community">
-                  <span class="badge badge-community news-card-badge">Community</span>
-                  <div class="news-card-share">
-                    <a href="#" class="share-circle share-fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="share-circle share-x" title="Share on X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="share-circle share-ig" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="share-circle share-plus" title="More"><i class="fas fa-plus"></i></a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <span class="card-date">June 23, 2025</span>
-                  <h5 class="card-headline">COMMUNITY HEADLINE FOR CARD FOUR</h5>
-                  <p class="card-excerpt">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-2">
-                    <img src="image/anchor.jpg" class="byline-avatar" alt="Anchor">
-                    <span class="byline-name">Channel 27 Staff</span>
-                  </div>
-                  <div class="card-stats">
-                    <span><i class="far fa-eye"></i> 643</span>
-                    <span><i class="far fa-heart"></i> 156</span>
-                    <span><i class="far fa-comment"></i> 18</span>
-                  </div>
-                </div>
-              </div>
+            <div class="fb-timeline-wrap">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/tysonmediaoutlet&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false" width="100%" height="700" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
             </div>
           </div>
+        </div>
 
-          <!-- Dark Feature Block -->
-          <div class="dark-feature mt-4">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="image/14.jpg" class="dark-feature-img" alt="Featured Story">
-              </div>
-              <div class="col-md-6 d-flex flex-column justify-content-center p-4">
-                <span class="badge badge-entertainment mb-2">Entertainment</span>
-                <h3 class="dark-feature-headline">[CLIENT TO PROVIDE — Featured story headline]</h3>
-                <span class="dark-feature-date">June 22, 2025</span>
-                <p class="dark-feature-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                <div>
-                  <a href="#" class="btn btn-gold rounded-0">Read More <i class="fas fa-arrow-right ms-2"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Watch Live Section -->
-          <section id="watch" class="mt-5">
-            <div class="section-header">🔴 WATCH CHANNEL 27</div>
-            <div class="card watch-card">
-              <div class="card-body p-3">
-                <!-- Main Video -->
-                <div class="video-16x9 mb-3">
-                  <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/tysonmediaoutlet/videos/372856174039591/&show_text=false" allowfullscreen></iframe>
-                </div>
-                <span class="badge badge-breaking mb-2">LIVE</span>
-                <h4 class="font-bebas">CHANNEL 27 LIVE BROADCAST</h4>
-
-                <!-- Two smaller videos -->
-                <div class="row mt-4 g-3">
-                  <div class="col-md-6">
-                    <div class="video-16x9 mb-2">
-                      <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/tysonmediaoutlet/videos/372856174039591/&show_text=false" allowfullscreen></iframe>
-                    </div>
-                    <span class="badge badge-entertainment mb-1">Entertainment</span>
-                    <h6 class="font-bebas">[CLIENT TO PROVIDE — Segment]</h6>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="video-16x9 mb-2">
-                      <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/tysonmediaoutlet/videos/372856174039591/&show_text=false" allowfullscreen></iframe>
-                    </div>
-                    <span class="badge badge-sports mb-1">Sports</span>
-                    <h6 class="font-bebas">[CLIENT TO PROVIDE — Segment]</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Meet The Team -->
-          <section id="community" class="mt-5">
-            <div class="section-header">MEET THE TEAM</div>
-            <div class="row g-3 mt-0">
-              <div class="col-md-4">
-                <div class="card team-card">
-                  <img src="image/anchor.jpg" class="team-img" alt="Anchor">
-                  <div class="team-info">
-                    <h5 class="team-name">[CLIENT TO PROVIDE]</h5>
-                    <span class="team-title">[CLIENT TO PROVIDE — Host name + title]</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card team-card">
-                  <img src="image/3.jpg" class="team-img" alt="Team Member">
-                  <div class="team-info">
-                    <h5 class="team-name">[CLIENT TO PROVIDE]</h5>
-                    <span class="team-title">[CLIENT TO PROVIDE — Team member name + title]</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card team-card">
-                  <img src="image/2.jpg" class="team-img" alt="Team Member">
-                  <div class="team-info">
-                    <h5 class="team-name">[CLIENT TO PROVIDE]</h5>
-                    <span class="team-title">[CLIENT TO PROVIDE — Team member name + title]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-        </div><!-- /col-lg-8 -->
-
-        <!-- ── 6B. SIDEBAR ── -->
+        <!-- RIGHT: Sidebar -->
         <div class="col-lg-4">
 
-          <!-- Social Follow Blocks -->
-          <div class="social-blocks mb-4">
-            <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="social-block social-fb">
-              <span class="social-block-icon"><i class="fab fa-facebook-f"></i></span>
-              <span class="social-block-text">Like On Facebook<br><small>[CLIENT] Likes</small></span>
-              <span class="social-block-plus"><i class="fas fa-plus"></i></span>
-            </a>
-            <a href="#" class="social-block social-yt">
-              <span class="social-block-icon"><i class="fab fa-youtube"></i></span>
-              <span class="social-block-text">Subscribe on YouTube<br><small>[CLIENT] Subscribers</small></span>
-              <span class="social-block-plus"><i class="fas fa-plus"></i></span>
-            </a>
-            <a href="#" class="social-block social-ig">
-              <span class="social-block-icon"><i class="fab fa-instagram"></i></span>
-              <span class="social-block-text">Follow on Instagram<br><small>[CLIENT] Followers</small></span>
-              <span class="social-block-plus"><i class="fas fa-plus"></i></span>
-            </a>
-            <a href="#" class="social-block social-x">
-              <span class="social-block-icon"><i class="fab fa-x-twitter"></i></span>
-              <span class="social-block-text">Follow on Twitter/X<br><small>[CLIENT] Followers</small></span>
-              <span class="social-block-plus"><i class="fas fa-plus"></i></span>
-            </a>
+          <!-- On Air Schedule -->
+          <div id="schedule" class="sidebar-section">
+            <div class="section-label">
+              <span>📺 ON AIR TONIGHT</span>
+            </div>
+            <div class="sidebar-card">
+              <div class="schedule-row"><span class="schedule-time">6:00 PM</span><span>Evening News</span></div>
+              <div class="schedule-row"><span class="schedule-time">7:00 PM</span><span>Grant County Report</span></div>
+              <div class="schedule-row"><span class="schedule-time">8:00 PM</span><span>Community Spotlight</span></div>
+              <div class="schedule-row"><span class="schedule-time">9:00 PM</span><span>Sports Roundup</span></div>
+              <div class="schedule-row border-bottom-0"><span class="schedule-time">10:00 PM</span><span>Channel 27 Late News</span></div>
+            </div>
           </div>
 
-          <!-- Live Facebook Feed -->
-          <section class="mb-4">
-            <div class="section-header">🔴 LIVE FEED</div>
-            <div class="card sidebar-card">
-              <div class="card-body p-2 text-center">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/tysonmediaoutlet&tabs=timeline&width=320&height=480&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" width="320" height="480" style="border:none;overflow:hidden;max-width:100%;" allowfullscreen></iframe>
+          <!-- Sponsors -->
+          <div id="sponsor" class="sidebar-section">
+            <div class="section-label">
+              <span>🤝 OUR SPONSORS</span>
+            </div>
+            <div class="sidebar-card">
+              <div class="sponsor-card">
+                <div class="sponsor-badge">Featured</div>
+                <h6 class="font-bebas text-purple mb-1">Chuck's Sewer Drain &amp; Plumbing</h6>
+                <p class="small text-muted mb-2">Your trusted local plumbing experts — proudly supporting Grant County news.</p>
+                <span class="sponsor-cta">📞 Call for service</span>
+              </div>
+              <div class="sponsor-card">
+                <div class="sponsor-badge sponsor-badge-available">Available</div>
+                <h6 class="font-bebas text-gold mb-1">Your Business Here</h6>
+                <p class="small text-muted mb-2">Reach thousands of Grant County viewers. Affordable sponsorship slots available.</p>
+                <span class="sponsor-cta">📧 Message us on Facebook</span>
               </div>
             </div>
-          </section>
+          </div>
 
-          <!-- On-Air Schedule -->
-          <section id="schedule" class="mb-4">
-            <div class="section-header">ON AIR TONIGHT</div>
-            <div class="card sidebar-card">
-              <div class="card-body p-0">
-                <div class="schedule-row"><span class="schedule-time">6:00 PM</span><span class="schedule-show">Evening News</span></div>
-                <div class="schedule-row"><span class="schedule-time">7:00 PM</span><span class="schedule-show">[CLIENT TO PROVIDE]</span></div>
-                <div class="schedule-row"><span class="schedule-time">8:00 PM</span><span class="schedule-show">[CLIENT TO PROVIDE]</span></div>
-                <div class="schedule-row"><span class="schedule-time">9:00 PM</span><span class="schedule-show">[CLIENT TO PROVIDE]</span></div>
-                <div class="schedule-row border-bottom-0"><span class="schedule-time">10:00 PM</span><span class="schedule-show">Channel 27 Late News</span></div>
-              </div>
+          <!-- Newsletter -->
+          <div id="contact" class="sidebar-section">
+            <div class="section-label">
+              <span>📬 GET NEWS ALERTS</span>
             </div>
-          </section>
-
-          <!-- Popular Stories -->
-          <section class="mb-4">
-            <div class="section-header">POPULAR STORIES</div>
-            <div class="card sidebar-card">
-              <div class="card-body p-0">
-                <div class="popular-item">
-                  <img src="image/20.jpg" class="popular-thumb" alt="Story">
-                  <div>
-                    <span class="badge badge-breaking mb-1">Breaking</span>
-                    <h6 class="popular-headline">BREAKING NEWS HEADLINE FOR POPULAR STORY ONE</h6>
-                    <span class="popular-date"><i class="far fa-clock text-gold me-1"></i>June 25, 2025</span>
-                  </div>
-                </div>
-                <div class="popular-item">
-                  <img src="image/21.jpg" class="popular-thumb" alt="Story">
-                  <div>
-                    <span class="badge badge-sports mb-1">Sports</span>
-                    <h6 class="popular-headline">SPORTS HEADLINE FOR POPULAR STORY TWO</h6>
-                    <span class="popular-date"><i class="far fa-clock text-gold me-1"></i>June 24, 2025</span>
-                  </div>
-                </div>
-                <div class="popular-item">
-                  <img src="image/22.jpg" class="popular-thumb" alt="Story">
-                  <div>
-                    <span class="badge badge-entertainment mb-1">Entertainment</span>
-                    <h6 class="popular-headline">ENTERTAINMENT HEADLINE FOR POPULAR STORY THREE</h6>
-                    <span class="popular-date"><i class="far fa-clock text-gold me-1"></i>June 23, 2025</span>
-                  </div>
-                </div>
-                <div class="popular-item border-bottom-0">
-                  <img src="image/23.jpg" class="popular-thumb" alt="Story">
-                  <div>
-                    <span class="badge badge-community mb-1">Community</span>
-                    <h6 class="popular-headline">COMMUNITY HEADLINE FOR POPULAR STORY FOUR</h6>
-                    <span class="popular-date"><i class="far fa-clock text-gold me-1"></i>June 22, 2025</span>
-                  </div>
-                </div>
+            <div class="sidebar-card p-3 text-center">
+              <h6 class="font-bebas mb-2">STAY INFORMED</h6>
+              <p class="small text-muted mb-3">Breaking news and updates delivered to your inbox. No spam, just Grant County news that matters.</p>
+              <div class="input-group mb-2">
+                <input type="email" class="form-control rounded-0" placeholder="Your email address">
+                <button class="btn btn-purple rounded-0" type="submit">SUBSCRIBE</button>
               </div>
+              <small class="text-muted">Or message us on <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="text-gold">Facebook</a></small>
             </div>
-          </section>
+          </div>
 
-          <!-- Trending Now -->
-          <section class="mb-4">
-            <div class="section-header">TRENDING NOW</div>
-            <div class="card sidebar-card">
-              <div class="card-body p-0">
-                <ul class="nav nav-tabs trending-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#trend-newest" type="button" role="tab">Newest</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trend-commented" type="button" role="tab">Most Commented</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trend-popular" type="button" role="tab">Popular</button>
-                  </li>
-                </ul>
-                <div class="tab-content p-3">
-                  <div class="tab-pane fade show active" id="trend-newest" role="tabpanel">
-                    <div class="trend-item">
-                      <span class="badge badge-breaking mb-1">Breaking</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 26, 2025</span>
-                      <p class="trend-excerpt">Breaking news story excerpt for the newest trending item on Channel 27.</p>
-                    </div>
-                    <div class="trend-item">
-                      <span class="badge badge-entertainment mb-1">Entertainment</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 25, 2025</span>
-                      <p class="trend-excerpt">Entertainment story excerpt with the latest updates from Grant County.</p>
-                    </div>
-                    <div class="trend-item border-bottom-0 pb-0">
-                      <span class="badge badge-sports mb-1">Sports</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 24, 2025</span>
-                      <p class="trend-excerpt">Sports coverage excerpt highlighting local teams and athletes.</p>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="trend-commented" role="tabpanel">
-                    <div class="trend-item">
-                      <span class="badge badge-community mb-1">Community</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 26, 2025</span>
-                      <p class="trend-excerpt">Most commented community story from Grant County residents.</p>
-                    </div>
-                    <div class="trend-item">
-                      <span class="badge badge-breaking mb-1">Breaking</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 25, 2025</span>
-                      <p class="trend-excerpt">Heavily discussed breaking news that's getting community attention.</p>
-                    </div>
-                    <div class="trend-item border-bottom-0 pb-0">
-                      <span class="badge badge-sports mb-1">Sports</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 24, 2025</span>
-                      <p class="trend-excerpt">Sports story generating lots of conversation among fans.</p>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="trend-popular" role="tabpanel">
-                    <div class="trend-item">
-                      <span class="badge badge-entertainment mb-1">Entertainment</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 26, 2025</span>
-                      <p class="trend-excerpt">Popular entertainment piece everyone is reading right now.</p>
-                    </div>
-                    <div class="trend-item">
-                      <span class="badge badge-breaking mb-1">Breaking</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 25, 2025</span>
-                      <p class="trend-excerpt">Widely read breaking news story from the Channel 27 newsroom.</p>
-                    </div>
-                    <div class="trend-item border-bottom-0 pb-0">
-                      <span class="badge badge-community mb-1">Community</span>
-                      <h6 class="mb-1">[CLIENT TO PROVIDE — Story title]</h6>
-                      <span class="trend-date">June 24, 2025</span>
-                      <p class="trend-excerpt">Community story resonating across Grant County.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Follow Blocks -->
+          <div class="sidebar-section">
+            <div class="social-follow-blocks">
+              <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="follow-block follow-fb">
+                <span class="follow-icon"><i class="fab fa-facebook-f"></i></span>
+                <span class="follow-text">Follow on Facebook</span>
+                <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
+              </a>
+              <a href="#" class="follow-block follow-yt">
+                <span class="follow-icon"><i class="fab fa-youtube"></i></span>
+                <span class="follow-text">Subscribe on YouTube</span>
+                <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
+              </a>
+              <a href="#" class="follow-block follow-ig">
+                <span class="follow-icon"><i class="fab fa-instagram"></i></span>
+                <span class="follow-text">Follow on Instagram</span>
+                <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
+              </a>
             </div>
-          </section>
+          </div>
 
-          <!-- Categories -->
-          <section class="mb-4">
-            <div class="section-header">CATEGORIES</div>
-            <div class="card sidebar-card">
-              <div class="card-body">
-                <div class="category-tags">
-                  <a href="#" class="category-tag">News</a>
-                  <a href="#" class="category-tag">Breaking</a>
-                  <a href="#" class="category-tag">Entertainment</a>
-                  <a href="#" class="category-tag">Sports</a>
-                  <a href="#" class="category-tag">Community</a>
-                  <a href="#" class="category-tag">Weather</a>
-                  <a href="#" class="category-tag">Politics</a>
-                  <a href="#" class="category-tag">Local</a>
-                  <a href="#" class="category-tag">Videos</a>
-                  <a href="#" class="category-tag">Lifestyle</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- News Alerts Signup -->
-          <section class="mb-4">
-            <div class="section-header">GET NEWS ALERTS</div>
-            <div class="card sidebar-card">
-              <div class="card-body text-center">
-                <h6 class="font-bebas mb-2">SUBSCRIBE NOW!</h6>
-                <p class="small text-muted mb-3">Breaking news, weather alerts and show updates delivered to your inbox.</p>
-                <div class="input-group mb-2">
-                  <input type="email" class="form-control rounded-0" placeholder="Your email address">
-                  <button class="btn btn-purple rounded-0" type="submit">SIGN UP</button>
-                </div>
-                <small class="text-muted">Or message us on Facebook</small>
-              </div>
-            </div>
-          </section>
-
-        </div><!-- /col-lg-4 -->
-
+        </div><!-- /sidebar -->
       </div><!-- /row -->
     </div><!-- /container -->
-  </div><!-- /main-content -->
+  </section>
 
-  <!-- ═══════════════════════════════════════════════ 7. FOOTER ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
-        <!-- Col 1 — Brand -->
-        <div class="col-md-3">
-          <img src="image/channel27-logo.png" alt="Channel 27" class="footer-logo mb-3" height="70">
-          <p class="footer-about">Channel 27 News & Entertainment is Grant County's trusted source for breaking news, weather, sports, and entertainment. Broadcasting from Marion, Indiana.</p>
-          <ul class="footer-contact-list">
-            <li><i class="fas fa-envelope text-gold me-2"></i>[CLIENT TO PROVIDE EMAIL]</li>
-            <li><i class="fas fa-phone text-gold me-2"></i>[CLIENT TO PROVIDE PHONE]</li>
-          </ul>
+        <div class="col-md-4">
+          <img src="image/channel27-logo.png" alt="Channel 27" class="footer-logo mb-3" height="64">
+          <p class="footer-about">Channel 27 News &amp; Entertainment is Grant County's independent local news station. Breaking news, crime updates, public safety, and community coverage — powered by real journalists and community support.</p>
           <div class="footer-social mt-3">
             <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="footer-social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="footer-social-circle" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -738,87 +300,42 @@
             <a href="#" class="footer-social-circle" aria-label="X"><i class="fab fa-x-twitter"></i></a>
           </div>
         </div>
-
-        <!-- Col 2 — On Air Schedule -->
-        <div class="col-md-3">
-          <h6 class="footer-heading">ON AIR SCHEDULE</h6>
-          <div class="footer-schedule">
-            <div class="footer-schedule-row"><span class="text-gold fw-bold">6:00 PM</span><span>Evening News</span></div>
-            <div class="footer-schedule-row"><span class="text-gold fw-bold">7:00 PM</span><span>[CLIENT TO PROVIDE]</span></div>
-            <div class="footer-schedule-row"><span class="text-gold fw-bold">8:00 PM</span><span>[CLIENT TO PROVIDE]</span></div>
-            <div class="footer-schedule-row"><span class="text-gold fw-bold">9:00 PM</span><span>[CLIENT TO PROVIDE]</span></div>
-            <div class="footer-schedule-row"><span class="text-gold fw-bold">10:00 PM</span><span>Channel 27 Late News</span></div>
-          </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">QUICK LINKS</h6>
+          <ul class="footer-links">
+            <li><a href="#live"><i class="fas fa-play text-red me-2"></i> Watch Live</a></li>
+            <li><a href="#feed"><i class="fas fa-newspaper text-gold me-2"></i> Latest News</a></li>
+            <li><a href="#schedule"><i class="fas fa-tv text-purple me-2"></i> On Air Schedule</a></li>
+            <li><a href="#sponsor"><i class="fas fa-handshake text-gold me-2"></i> Become a Sponsor</a></li>
+            <li><a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener"><i class="fab fa-facebook text-gold me-2"></i> Facebook Page</a></li>
+          </ul>
         </div>
-
-        <!-- Col 3 — Latest Stories -->
-        <div class="col-md-3">
-          <h6 class="footer-heading">LATEST STORIES</h6>
-          <div class="footer-stories">
-            <div class="footer-story-item">
-              <span class="badge badge-breaking mb-1">Breaking</span>
-              <h6 class="footer-story-title">[CLIENT TO PROVIDE — Story title]</h6>
-              <span class="footer-story-date">June 26, 2025</span>
-            </div>
-            <div class="footer-story-item">
-              <span class="badge badge-entertainment mb-1">Entertainment</span>
-              <h6 class="footer-story-title">[CLIENT TO PROVIDE — Story title]</h6>
-              <span class="footer-story-date">June 25, 2025</span>
-            </div>
-            <div class="footer-story-item">
-              <span class="badge badge-sports mb-1">Sports</span>
-              <h6 class="footer-story-title">[CLIENT TO PROVIDE — Story title]</h6>
-              <span class="footer-story-date">June 24, 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Col 4 — Recent Coverage -->
-        <div class="col-md-3">
-          <h6 class="footer-heading">RECENT COVERAGE</h6>
-          <div class="footer-gallery">
-            <img src="image/1.jpg" alt="Coverage" class="footer-gallery-img">
-            <img src="image/2.jpg" alt="Coverage" class="footer-gallery-img">
-            <img src="image/3.jpg" alt="Coverage" class="footer-gallery-img">
-            <img src="image/4.jpg" alt="Coverage" class="footer-gallery-img">
-            <img src="image/5.jpg" alt="Coverage" class="footer-gallery-img">
-            <img src="image/6.jpg" alt="Coverage" class="footer-gallery-img">
-          </div>
-          <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="btn btn-gold rounded-0 w-100 mt-3">Follow On Facebook</a>
+        <div class="col-md-4">
+          <h6 class="footer-heading">SUPPORT LOCAL NEWS</h6>
+          <p class="footer-about mb-3">Independent local journalism only works with community support. Sponsor a segment, advertise your business, or share our stories.</p>
+          <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="btn btn-gold rounded-0 w-100">Message Us on Facebook</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════ 8. FOOTER BOTTOM BAR ═══════════════════════════════════════════════ -->
+  <!-- ═══════════ FOOTER BOTTOM ═══════════ -->
   <div class="footer-bottom">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <div class="col-md-2 footer-accent-gold"></div>
-        <div class="col-md-8 footer-bottom-center">
-          <div class="footer-bottom-links">
-            <a href="#">Home</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#">News</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#">Entertainment</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#">Sports</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#watch">Videos</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#community">Team</a>
-            <span class="footer-link-sep">|</span>
-            <a href="#">Contact</a>
-          </div>
-          <p class="footer-copyright">© 2025 Channel 27 News &amp; Entertainment. All Rights Reserved. Site by Rowdy Designs</p>
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <span class="footer-copy">© 2025 Channel 27 News &amp; Entertainment. All Rights Reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Home</a>
+          <a href="#live">Watch Live</a>
+          <a href="#feed">News</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#sponsor">Sponsors</a>
         </div>
-        <div class="col-md-2 footer-accent-purple"></div>
+        <span class="footer-credit">Site by Rowdy Designs</span>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>

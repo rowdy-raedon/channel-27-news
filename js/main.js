@@ -1,127 +1,78 @@
 /**
- * Channel 27 News & Entertainment — Main JavaScript
- * Vanilla JS only — no jQuery, no frameworks
+ * Channel 27 News & Entertainment
+ * Vanilla JS — no frameworks
  */
-
 (function () {
   'use strict';
 
   // ── Auto Date ──
-  function setDate() {
-    var el = document.getElementById('topbar-date');
-    if (!el) return;
-    el.textContent = new Date().toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+  var dateEl = document.getElementById('topbar-date');
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString('en-US', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
   }
 
-  // ── Navbar Scroll Shadow ──
-  function handleNavbarScroll() {
-    var navbar = document.querySelector('.main-navbar');
+  // ── Navbar Shadow on Scroll ──
+  var navbar = document.querySelector('.main-navbar');
+  function navShadow() {
     if (!navbar) return;
-    if (window.scrollY > 10) {
-      navbar.style.boxShadow = '0 2px 12px rgba(0,0,0,0.5)';
-    } else {
-      navbar.style.boxShadow = 'none';
+    navbar.style.boxShadow = window.scrollY > 10
+      ? '0 2px 12px rgba(0,0,0,0.6)'
+      : 'none';
+  }
+  window.addEventListener('scroll', navShadow);
+  navShadow();
+
+  // ── Smooth Scroll (offset for sticky navbar) ──
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute('href');
+    if (id === '#') return;
+    var target = document.querySelector(id);
+    if (!target) return;
+
+    e.preventDefault();
+    var offset = navbar ? navbar.offsetHeight + 10 : 60;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+
+    // Close mobile offcanvas
+    var offcanvas = document.getElementById('mobileNav');
+    if (offcanvas && offcanvas.classList.contains('show')) {
+      var bs = bootstrap.Offcanvas.getInstance(offcanvas);
+      if (bs) bs.hide();
     }
-  }
-
-  // ── Smooth Scroll for Anchor Links (offset for sticky navbar) ──
-  function handleAnchorClicks() {
-    document.addEventListener('click', function (e) {
-      var link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-      var targetId = link.getAttribute('href');
-      if (targetId === '#') return;
-      var target = document.querySelector(targetId);
-      if (!target) return;
-
-      e.preventDefault();
-      var navbarHeight = document.querySelector('.main-navbar')
-        ? document.querySelector('.main-navbar').offsetHeight
-        : 56;
-      var top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 10;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-
-      // Close mobile offcanvas if open
-      var offcanvas = document.getElementById('mobileNav');
-      if (offcanvas && offcanvas.classList.contains('show')) {
-        var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
-        if (bsOffcanvas) bsOffcanvas.hide();
-      }
-    });
-  }
-
-  // ── Active Nav Link Highlight on Scroll ──
-  function updateActiveNavLink() {
-    var sections = document.querySelectorAll('section[id]');
-    var navLinks = document.querySelectorAll('.main-navbar .nav-link[href^="#"]');
-    if (!sections.length || !navLinks.length) return;
-
-    var scrollPos = window.scrollY + 100;
-    var currentId = '';
-
-    sections.forEach(function (section) {
-      var top = section.offsetTop - 120;
-      if (scrollPos >= top) {
-        currentId = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(function (link) {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + currentId) {
-        link.classList.add('active');
-      }
-    });
-  }
+  });
 
   // ── Ticker Pause on Hover ──
-  function setupTickerPause() {
-    var tickerText = document.querySelector('.ticker-text');
-    if (!tickerText) return;
-    tickerText.addEventListener('mouseenter', function () {
-      tickerText.style.animationPlayState = 'paused';
-    });
-    tickerText.addEventListener('mouseleave', function () {
-      tickerText.style.animationPlayState = 'running';
-    });
+  var ticker = document.querySelector('.ticker-text');
+  if (ticker) {
+    ticker.addEventListener('mouseenter', function () { ticker.style.animationPlayState = 'paused'; });
+    ticker.addEventListener('mouseleave', function () { ticker.style.animationPlayState = 'running'; });
   }
 
-  // ── Init ──
-  function init() {
-    setDate();
-    setupTickerPause();
+  // ── Active Nav Highlight ──
+  var navLinks = document.querySelectorAll('.main-navbar .nav-link[href^="#"]');
+  var sections = [];
+  navLinks.forEach(function (l) {
+    var el = document.querySelector(l.getAttribute('href'));
+    if (el) sections.push({ link: l, el: el });
+  });
 
-    window.addEventListener('scroll', function () {
-      handleNavbarScroll();
-      updateActiveNavLink();
+  function updateActive() {
+    var scrollPos = window.scrollY + 120;
+    var current = '';
+    sections.forEach(function (s) {
+      if (scrollPos >= s.el.offsetTop) current = s.link.getAttribute('href');
     });
-
-    handleNavbarScroll();
-    handleAnchorClicks();
-  }
-
-  // Bootstrap must be loaded first — wait for it
-  if (typeof bootstrap !== 'undefined') {
-    init();
-  } else {
-    // If Bootstrap loads after us, defer init
-    window.addEventListener('load', function () {
-      if (typeof bootstrap !== 'undefined') {
-        init();
-      } else {
-        // Fallback: init what we can without Bootstrap
-        setDate();
-        setupTickerPause();
-        window.addEventListener('scroll', handleNavbarScroll);
-        handleNavbarScroll();
-        handleAnchorClicks();
-      }
+    navLinks.forEach(function (l) {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === current) l.classList.add('active');
     });
   }
+  window.addEventListener('scroll', updateActive);
+  updateActive();
 
 })();
