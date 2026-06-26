@@ -5,3 +5,5 @@ Thumbs.db
 .playwright-mcp/
 fb-snapshot*.txt
 fb-page-snapshot.txt
+mobile-preview.png
+mobile-fixed.png
