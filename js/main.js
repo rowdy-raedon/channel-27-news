@@ -1,78 +1,75 @@
 /**
  * Channel 27 News & Entertainment
- * Vanilla JS — no frameworks
  */
 (function () {
   'use strict';
 
-  // ── Auto Date ──
-  var dateEl = document.getElementById('topbar-date');
-  if (dateEl) {
-    dateEl.textContent = new Date().toLocaleDateString('en-US', {
+  // ── Date ──
+  var d = document.getElementById('topbar-date');
+  if (d) {
+    d.textContent = new Date().toLocaleDateString('en-US', {
       weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
   }
 
-  // ── Navbar Shadow on Scroll ──
-  var navbar = document.querySelector('.main-navbar');
-  function navShadow() {
-    if (!navbar) return;
-    navbar.style.boxShadow = window.scrollY > 10
-      ? '0 2px 12px rgba(0,0,0,0.6)'
-      : 'none';
+  // ── Navbar shadow ──
+  var nav = document.querySelector('.main-navbar');
+  function shadow() {
+    if (!nav) return;
+    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 12px rgba(0,0,0,0.6)' : 'none';
   }
-  window.addEventListener('scroll', navShadow);
-  navShadow();
+  window.addEventListener('scroll', shadow);
+  shadow();
 
-  // ── Smooth Scroll (offset for sticky navbar) ──
+  // ── Smooth scroll ──
   document.addEventListener('click', function (e) {
-    var link = e.target.closest('a[href^="#"]');
-    if (!link) return;
-    var id = link.getAttribute('href');
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href');
     if (id === '#') return;
-    var target = document.querySelector(id);
-    if (!target) return;
-
+    var t = document.querySelector(id);
+    if (!t) return;
     e.preventDefault();
-    var offset = navbar ? navbar.offsetHeight + 10 : 60;
-    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: top, behavior: 'smooth' });
-
-    // Close mobile offcanvas
-    var offcanvas = document.getElementById('mobileNav');
-    if (offcanvas && offcanvas.classList.contains('show')) {
-      var bs = bootstrap.Offcanvas.getInstance(offcanvas);
+    var o = nav ? nav.offsetHeight + 10 : 60;
+    window.scrollTo({ top: t.getBoundingClientRect().top + pageYOffset - o, behavior: 'smooth' });
+    // close offcanvas
+    var oc = document.getElementById('mobileNav');
+    if (oc && oc.classList.contains('show') && typeof bootstrap !== 'undefined') {
+      var bs = bootstrap.Offcanvas.getInstance(oc);
       if (bs) bs.hide();
     }
   });
 
-  // ── Ticker Pause on Hover ──
-  var ticker = document.querySelector('.ticker-text');
-  if (ticker) {
-    ticker.addEventListener('mouseenter', function () { ticker.style.animationPlayState = 'paused'; });
-    ticker.addEventListener('mouseleave', function () { ticker.style.animationPlayState = 'running'; });
+  // ── Ticker hover ──
+  var tick = document.querySelector('.ticker-text');
+  if (tick) {
+    tick.addEventListener('mouseenter', function () { tick.style.animationPlayState = 'paused'; });
+    tick.addEventListener('mouseleave', function () { tick.style.animationPlayState = 'running'; });
   }
 
-  // ── Active Nav Highlight ──
-  var navLinks = document.querySelectorAll('.main-navbar .nav-link[href^="#"]');
-  var sections = [];
-  navLinks.forEach(function (l) {
+  // ── Active nav ──
+  var links = document.querySelectorAll('.main-navbar .nav-link[href^="#"]');
+  var secs = [];
+  links.forEach(function (l) {
     var el = document.querySelector(l.getAttribute('href'));
-    if (el) sections.push({ link: l, el: el });
+    if (el) secs.push({ l: l, el: el });
   });
-
-  function updateActive() {
-    var scrollPos = window.scrollY + 120;
-    var current = '';
-    sections.forEach(function (s) {
-      if (scrollPos >= s.el.offsetTop) current = s.link.getAttribute('href');
-    });
-    navLinks.forEach(function (l) {
+  function active() {
+    var pos = scrollY + 120, cur = '';
+    secs.forEach(function (s) { if (pos >= s.el.offsetTop) cur = s.l.getAttribute('href'); });
+    links.forEach(function (l) {
       l.classList.remove('active');
-      if (l.getAttribute('href') === current) l.classList.add('active');
+      if (l.getAttribute('href') === cur) l.classList.add('active');
     });
   }
-  window.addEventListener('scroll', updateActive);
-  updateActive();
+  window.addEventListener('scroll', active);
+  active();
+
+  // ── FB SDK re-parse ──
+  window.fbAsyncInit = function () {
+    if (typeof FB !== 'undefined') {
+      FB.init({ xfbml: true, version: 'v22.0' });
+    }
+  };
 
 })();

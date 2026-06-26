@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Channel 27 News & Entertainment — Grant County's source for breaking news, crime, public safety, and community updates. Watch live, follow our Facebook feed, and stay informed.">
+  <meta name="description" content="Channel 27 News & Entertainment — Grant County's source for breaking news, crime, public safety, and community updates. Local journalism that holds power accountable.">
   <meta name="theme-color" content="#0d0d0d">
   <meta property="og:title" content="Channel 27 News & Entertainment">
-  <meta property="og:description" content="Grant County's trusted local news. Breaking updates, live video, and community coverage.">
+  <meta property="og:description" content="Grant County's trusted local news. Breaking updates and community coverage.">
   <meta property="og:image" content="image/channel27-logo.png">
   <meta property="og:url" content="https://channel27news.com">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,9 +28,9 @@
         <div class="topbar-left">
           <span id="topbar-date" class="topbar-date"></span>
           <span class="topbar-sep">|</span>
-          <a href="#live" class="topbar-link live-link"><span class="live-dot"></span> Watch Live</a>
+          <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="topbar-link"><i class="fab fa-facebook-f"></i> Facebook</a>
           <span class="topbar-sep">|</span>
-          <a href="#schedule" class="topbar-link"><i class="fas fa-calendar-alt"></i> On Air Schedule</a>
+          <a href="#contact" class="topbar-link"><i class="fas fa-envelope"></i> News Tips</a>
         </div>
         <div class="topbar-right">
           <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="topbar-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="header-contact">
-            <i class="fas fa-phone header-contact-icon"></i>
+            <i class="fas fa-bullhorn header-contact-icon"></i>
             <div>
               <span class="header-contact-label">Advertise</span>
               <span class="header-contact-value">Become a sponsor</span>
@@ -82,29 +82,21 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#live">Watch Live</a></li>
-          <li class="nav-item"><a class="nav-link" href="#feed">Latest News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#schedule">On Air</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sponsor">Sponsors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link nav-live" href="#live"><span class="live-dot"></span> Live</a></li>
         </ul>
         <div class="navbar-social d-none d-lg-flex">
           <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-        <form class="navbar-search d-none d-lg-flex ms-3" role="search">
-          <div class="input-group input-group-sm">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
-          </div>
-        </form>
       </div>
     </div>
   </nav>
 
-  <!-- Offcanvas Mobile Menu -->
+  <!-- Offcanvas Mobile -->
   <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileNav">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title font-bebas">Channel 27</h5>
@@ -113,55 +105,91 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#live">Watch Live</a></li>
-        <li class="nav-item"><a class="nav-link" href="#feed">Latest News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#schedule">On Air</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sponsor">Sponsors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#stories">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 
-  <!-- ═══════════ BREAKING NEWS TICKER ═══════════ -->
+  <!-- ═══════════ BREAKING TICKER ═══════════ -->
   <div class="breaking-ticker">
     <div class="container d-flex align-items-center">
-      <span class="breaking-pill">🔴 BREAKING</span>
+      <span class="breaking-pill">BREAKING</span>
       <div class="ticker-wrap">
         <div class="ticker-text" id="tickerText">
-          <span class="ticker-item">🚨 Leland James Smith Sr. remains in custody on child molestation charges — being transferred to Fulton County Jail</span>
+          <span class="ticker-item">Leland James Smith Sr. remains in custody on child molestation charges — being transferred to Fulton County Jail</span>
           <span class="ticker-sep">◆</span>
-          <span class="ticker-item">Follow Channel 27 on Facebook for live updates and breaking news alerts</span>
+          <span class="ticker-item">Follow Channel 27 on Facebook for the latest Grant County news updates</span>
           <span class="ticker-sep">◆</span>
           <span class="ticker-item">Have a news tip? Message us on Facebook — we verify every report</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">Local news powered by community support — become a sponsor today</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════ HERO — LIVE VIDEO ═══════════ -->
-  <section id="live" class="hero-section">
+  <!-- ═══════════ FEATURED STORIES ═══════════ -->
+  <section id="stories" class="stories-section">
     <div class="container">
-      <div class="row">
+      <div class="section-header-bar">
+        <h2 class="section-title">LATEST STORIES</h2>
+        <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="section-link">More on Facebook <i class="fas fa-arrow-right ms-1"></i></a>
+      </div>
+
+      <div class="row g-3">
+        <!-- Featured Post 1 — Primary -->
         <div class="col-lg-8">
-          <div class="video-container">
-            <span class="video-live-badge"><span class="live-dot"></span> LIVE</span>
-            <div class="video-16x9">
-              <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/tysonmediaoutlet/videos/372856174039591/&show_text=false" allowfullscreen></iframe>
+          <div class="fb-embed-card fb-embed-primary">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
             </div>
           </div>
         </div>
+
+        <!-- Featured Post 2 -->
         <div class="col-lg-4">
-          <div class="hero-sidebar">
-            <div class="hero-now-on">
-              <span class="text-red fw-bold text-uppercase small">Now Playing</span>
-              <h3 class="font-bebas text-white mt-1 mb-3">CHANNEL 27 LIVE</h3>
-              <p class="text-light-gray small">Grant County's source for breaking news, crime updates, and community coverage. Watch live broadcasts and stay informed.</p>
+          <div class="fb-embed-card">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
             </div>
-            <div class="hero-sponsor">
-              <span class="text-gold text-uppercase small fw-bold">Sponsored By</span>
-              <p class="text-white mb-1 fw-bold">Chuck's Sewer Drain &amp; Plumbing</p>
-              <p class="text-light-gray" style="font-size:0.7rem;">Proud supporter of local news</p>
-              <a href="#sponsor" class="btn btn-gold btn-sm rounded-0 mt-2">Become a Sponsor</a>
+          </div>
+        </div>
+
+        <!-- Featured Post 3 -->
+        <div class="col-md-6">
+          <div class="fb-embed-card">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Post 4 -->
+        <div class="col-md-6">
+          <div class="fb-embed-card">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Post 5 -->
+        <div class="col-md-6">
+          <div class="fb-embed-card">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Post 6 -->
+        <div class="col-md-6">
+          <div class="fb-embed-card">
+            <div class="fb-post-wrapper">
+              <div class="fb-post" data-href="https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l" data-show-text="true" data-width=""></div>
             </div>
           </div>
         </div>
@@ -169,98 +197,60 @@
     </div>
   </section>
 
-  <!-- ═══════════ MAIN CONTENT ═══════════ -->
-  <section id="feed" class="main-section">
+  <!-- ═══════════ FULL TIMELINE ═══════════ -->
+  <section id="timeline" class="timeline-section">
     <div class="container">
+      <div class="section-header-bar">
+        <h2 class="section-title">FULL TIMELINE</h2>
+        <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="section-link">Open in Facebook <i class="fas fa-external-link-alt ms-1"></i></a>
+      </div>
+
       <div class="row">
-
-        <!-- LEFT: Facebook Feed -->
         <div class="col-lg-8">
-          <div class="section-label">
-            <span>📰 LATEST FROM CHANNEL 27</span>
-            <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="section-label-link">View on Facebook <i class="fas fa-external-link-alt ms-1"></i></a>
-          </div>
-
-          <!-- Featured Post Embed -->
-          <div class="fb-post-card mb-4">
-            <div class="fb-post-header">
-              <img src="image/channel27-logo.png" alt="Channel 27" height="32">
-              <div>
-                <strong class="text-white">Channel 27 News and Entertainment</strong>
-                <span class="text-light-gray" style="font-size:0.7rem;display:block;">Grant County</span>
-              </div>
-            </div>
-            <div class="fb-post-embed">
-              <iframe src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/tysonmediaoutlet/posts/pfbid02mRHv2XLWSvf3wVsVMbJhPF79YywRJHts9nEk5QborVLmFqtWoJhSR5Y2KRRcKVN1l&show_text=true&width=500" width="100%" style="border:none;overflow:hidden;min-height:400px;" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-            </div>
-          </div>
-
-          <!-- Full Timeline Feed -->
-          <div class="fb-timeline-card">
-            <div class="section-label mb-0">
-              <span>📱 FULL TIMELINE</span>
-            </div>
-            <div class="fb-timeline-wrap">
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/tysonmediaoutlet&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false" width="100%" height="700" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-            </div>
+          <div class="fb-page-wrapper">
+            <div class="fb-page" data-href="https://www.facebook.com/tysonmediaoutlet" data-tabs="timeline" data-width="" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
         </div>
 
-        <!-- RIGHT: Sidebar -->
+        <!-- Sidebar -->
         <div class="col-lg-4">
 
-          <!-- On Air Schedule -->
-          <div id="schedule" class="sidebar-section">
-            <div class="section-label">
-              <span>📺 ON AIR TONIGHT</span>
-            </div>
-            <div class="sidebar-card">
-              <div class="schedule-row"><span class="schedule-time">6:00 PM</span><span>Evening News</span></div>
-              <div class="schedule-row"><span class="schedule-time">7:00 PM</span><span>Grant County Report</span></div>
-              <div class="schedule-row"><span class="schedule-time">8:00 PM</span><span>Community Spotlight</span></div>
-              <div class="schedule-row"><span class="schedule-time">9:00 PM</span><span>Sports Roundup</span></div>
-              <div class="schedule-row border-bottom-0"><span class="schedule-time">10:00 PM</span><span>Channel 27 Late News</span></div>
-            </div>
-          </div>
-
           <!-- Sponsors -->
-          <div id="sponsor" class="sidebar-section">
-            <div class="section-label">
-              <span>🤝 OUR SPONSORS</span>
+          <div id="sponsors" class="sidebar-section">
+            <div class="section-header-bar mb-1">
+              <h2 class="section-title">SPONSORS</h2>
             </div>
             <div class="sidebar-card">
               <div class="sponsor-card">
-                <div class="sponsor-badge">Featured</div>
-                <h6 class="font-bebas text-purple mb-1">Chuck's Sewer Drain &amp; Plumbing</h6>
-                <p class="small text-muted mb-2">Your trusted local plumbing experts — proudly supporting Grant County news.</p>
+                <span class="sponsor-badge">Featured Sponsor</span>
+                <h5 class="font-bebas text-purple mt-2 mb-1">Chuck's Sewer Drain &amp; Plumbing</h5>
+                <p class="small text-light-gray mb-2">Your trusted local plumbing experts — proudly supporting Grant County news.</p>
                 <span class="sponsor-cta">📞 Call for service</span>
               </div>
               <div class="sponsor-card">
-                <div class="sponsor-badge sponsor-badge-available">Available</div>
-                <h6 class="font-bebas text-gold mb-1">Your Business Here</h6>
-                <p class="small text-muted mb-2">Reach thousands of Grant County viewers. Affordable sponsorship slots available.</p>
-                <span class="sponsor-cta">📧 Message us on Facebook</span>
+                <span class="sponsor-badge sponsor-badge-open">Your Business Here</span>
+                <p class="small text-light-gray mb-2 mt-2">Reach Grant County viewers. Affordable sponsorship slots available.</p>
+                <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="btn btn-gold btn-sm rounded-0">Message Us on Facebook</a>
               </div>
             </div>
           </div>
 
           <!-- Newsletter -->
           <div id="contact" class="sidebar-section">
-            <div class="section-label">
-              <span>📬 GET NEWS ALERTS</span>
+            <div class="section-header-bar mb-1">
+              <h2 class="section-title">NEWS ALERTS</h2>
             </div>
-            <div class="sidebar-card p-3 text-center">
-              <h6 class="font-bebas mb-2">STAY INFORMED</h6>
-              <p class="small text-muted mb-3">Breaking news and updates delivered to your inbox. No spam, just Grant County news that matters.</p>
+            <div class="sidebar-card p-3">
+              <p class="small text-light-gray mb-3">Breaking news and updates delivered to your inbox. No spam — just Grant County news that matters.</p>
               <div class="input-group mb-2">
                 <input type="email" class="form-control rounded-0" placeholder="Your email address">
                 <button class="btn btn-purple rounded-0" type="submit">SUBSCRIBE</button>
               </div>
-              <small class="text-muted">Or message us on <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="text-gold">Facebook</a></small>
+              <small class="text-light-gray">Or message us on <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="text-gold">Facebook</a></small>
             </div>
           </div>
 
-          <!-- Follow Blocks -->
+          <!-- Follow -->
           <div class="sidebar-section">
             <div class="social-follow-blocks">
               <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="follow-block follow-fb">
@@ -268,22 +258,12 @@
                 <span class="follow-text">Follow on Facebook</span>
                 <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
               </a>
-              <a href="#" class="follow-block follow-yt">
-                <span class="follow-icon"><i class="fab fa-youtube"></i></span>
-                <span class="follow-text">Subscribe on YouTube</span>
-                <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
-              </a>
-              <a href="#" class="follow-block follow-ig">
-                <span class="follow-icon"><i class="fab fa-instagram"></i></span>
-                <span class="follow-text">Follow on Instagram</span>
-                <span class="follow-arrow"><i class="fas fa-chevron-right"></i></span>
-              </a>
             </div>
           </div>
 
-        </div><!-- /sidebar -->
-      </div><!-- /row -->
-    </div><!-- /container -->
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ═══════════ FOOTER ═══════════ -->
@@ -292,7 +272,7 @@
       <div class="row g-4">
         <div class="col-md-4">
           <img src="image/channel27-logo.png" alt="Channel 27" class="footer-logo mb-3" height="64">
-          <p class="footer-about">Channel 27 News &amp; Entertainment is Grant County's independent local news station. Breaking news, crime updates, public safety, and community coverage — powered by real journalists and community support.</p>
+          <p class="footer-about">Channel 27 News &amp; Entertainment is Grant County's independent local news station. Breaking news, crime updates, public safety, and community coverage.</p>
           <div class="footer-social mt-3">
             <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="footer-social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="footer-social-circle" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -303,16 +283,15 @@
         <div class="col-md-4">
           <h6 class="footer-heading">QUICK LINKS</h6>
           <ul class="footer-links">
-            <li><a href="#live"><i class="fas fa-play text-red me-2"></i> Watch Live</a></li>
-            <li><a href="#feed"><i class="fas fa-newspaper text-gold me-2"></i> Latest News</a></li>
-            <li><a href="#schedule"><i class="fas fa-tv text-purple me-2"></i> On Air Schedule</a></li>
-            <li><a href="#sponsor"><i class="fas fa-handshake text-gold me-2"></i> Become a Sponsor</a></li>
+            <li><a href="#stories"><i class="fas fa-newspaper text-gold me-2"></i> Latest Stories</a></li>
+            <li><a href="#timeline"><i class="fas fa-clock text-purple me-2"></i> Full Timeline</a></li>
+            <li><a href="#sponsors"><i class="fas fa-handshake text-gold me-2"></i> Sponsors</a></li>
             <li><a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener"><i class="fab fa-facebook text-gold me-2"></i> Facebook Page</a></li>
           </ul>
         </div>
         <div class="col-md-4">
           <h6 class="footer-heading">SUPPORT LOCAL NEWS</h6>
-          <p class="footer-about mb-3">Independent local journalism only works with community support. Sponsor a segment, advertise your business, or share our stories.</p>
+          <p class="footer-about mb-3">Independent local journalism only works with community support. Sponsor a segment or advertise your business.</p>
           <a href="https://www.facebook.com/tysonmediaoutlet" target="_blank" rel="noopener" class="btn btn-gold rounded-0 w-100">Message Us on Facebook</a>
         </div>
       </div>
@@ -326,15 +305,18 @@
         <span class="footer-copy">© 2025 Channel 27 News &amp; Entertainment. All Rights Reserved.</span>
         <div class="footer-bottom-links">
           <a href="#">Home</a>
-          <a href="#live">Watch Live</a>
-          <a href="#feed">News</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#sponsor">Sponsors</a>
+          <a href="#stories">News</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#sponsors">Sponsors</a>
         </div>
         <span class="footer-credit">Site by Rowdy Designs</span>
       </div>
     </div>
   </div>
+
+  <!-- Facebook JS SDK -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
