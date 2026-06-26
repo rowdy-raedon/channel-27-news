@@ -1,0 +1,16 @@
+- generic [ref=e12]:
+  - generic [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]: Raedon Mcbroom • Facebook
+      - heading "Check your notifications on another device" [level=2] [ref=e24]:
+        - generic [ref=e25]: Check your notifications on another device
+      - generic [ref=e26]: We sent a notification to your Windows PC and iPhone 16 Pro Max. Check your Facebook notifications there and approve the login to continue.
+    - generic [ref=e30]:
+      - img [ref=e32]
+      - generic [ref=e37]:
+        - generic [ref=e38]: Waiting for approval
+        - generic [ref=e40]: It may take a few minutes to get the notification on your other device.
+    - button "Try another way" [ref=e43] [cursor=pointer]:
+      - generic [ref=e46]: Try another way
+  - generic:
+    - img

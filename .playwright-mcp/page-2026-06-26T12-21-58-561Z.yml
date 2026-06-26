@@ -1,0 +1,516 @@
+- generic [ref=e5]:
+  - banner:
+    - generic [ref=e6]:
+      - generic:
+        - generic:
+          - button [disabled]:
+            - img
+      - link "Facebook" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic:
+          - generic:
+            - generic:
+              - button:
+                - img
+      - generic [ref=e19]:
+        - generic:
+          - img
+        - combobox "Search Facebook" [ref=e20] [cursor=pointer]
+    - navigation "Facebook" [ref=e24]:
+      - list [ref=e25]:
+        - listitem [ref=e26]:
+          - link "Home" [ref=e29] [cursor=pointer]:
+            - /url: /
+            - img [ref=e31]
+        - listitem [ref=e33]:
+          - link "Professional dashboard" [ref=e36] [cursor=pointer]:
+            - /url: /professional_dashboard/?ref=tab_bar
+            - img [ref=e38]
+        - listitem [ref=e41]:
+          - link "Reels" [ref=e44] [cursor=pointer]:
+            - /url: /reel/?s=tab
+            - img [ref=e46]
+        - listitem [ref=e49]:
+          - link "Marketplace" [ref=e52] [cursor=pointer]:
+            - /url: /marketplace/?ref=app_tab
+            - img [ref=e54]
+        - listitem [ref=e56]:
+          - link "Gaming" [ref=e59] [cursor=pointer]:
+            - /url: /gaming/play/?store_visit_source=gaming_tab
+            - img [ref=e61]
+    - navigation "Account Controls and Settings" [ref=e65]:
+      - button "Facebook menu" [ref=e69] [cursor=pointer]:
+        - img [ref=e70]
+      - button "Messenger" [ref=e76] [cursor=pointer]:
+        - img [ref=e77]
+      - button "Notifications" [ref=e83] [cursor=pointer]:
+        - img [ref=e84]
+      - button "Your profile" [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - img "Your profile" [ref=e90]
+          - img [ref=e97]
+  - main [ref=e106]:
+    - generic [ref=e107]:
+      - link "View profile cover photo" [ref=e118] [cursor=pointer]:
+        - /url: https://www.facebook.com/photo/?fbid=1140847591376285&set=a.730644792396569
+      - generic [ref=e126]:
+        - button "Channel 27 News and Entertainment, Grant County" [ref=e130] [cursor=pointer]:
+          - img "Channel 27 News and Entertainment, Grant County" [ref=e132]
+        - generic [ref=e139]:
+          - generic [ref=e141]:
+            - generic [ref=e144]:
+              - heading "Channel 27 News and Entertainment, Grant County Verified account" [level=1] [ref=e149]:
+                - button "Channel 27 News and Entertainment, Grant County Verified account" [ref=e150] [cursor=pointer]:
+                  - text: Channel 27 News and Entertainment, Grant County
+                  - img "Verified account" [ref=e156]
+              - generic [ref=e159]:
+                - link "60K likes" [ref=e160] [cursor=pointer]:
+                  - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                  - strong [ref=e161]: 60K
+                  - text: likes
+                - text: •
+                - link "60K followers" [ref=e162] [cursor=pointer]:
+                  - /url: https://www.facebook.com/tysonmediaoutlet/followers/
+                  - strong [ref=e163]: 60K
+                  - text: followers
+            - generic [ref=e166]:
+              - link "Subscribe" [ref=e169] [cursor=pointer]:
+                - /url: https://www.facebook.com/100063531640187/support/?surface=page_top_cta_button&entrypoint_surface=page_top_cta_button
+                - generic [ref=e172]: Subscribe
+              - button "Liked" [ref=e175] [cursor=pointer]:
+                - generic [ref=e178]: Liked
+              - button "Message" [ref=e181] [cursor=pointer]:
+                - generic [ref=e184]: Message
+          - generic [ref=e186]: News and Entertainment
+          - list "Highlighted details" [ref=e190]:
+            - listitem [ref=e191]:
+              - generic [ref=e192]:
+                - img [ref=e194]
+                - button "News & media website" [ref=e195] [cursor=pointer]
+          - list [ref=e200]:
+            - listitem [ref=e201]:
+              - link "Derick Fitch" [ref=e202] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e204]
+            - listitem [ref=e208]:
+              - link "Toni Little" [ref=e209] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e211]
+            - listitem [ref=e215]:
+              - link "Chris Sherron" [ref=e216] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e218]
+            - listitem [ref=e222]:
+              - link "Ashtin Lee Taylor" [ref=e223] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e225]
+            - listitem [ref=e229]:
+              - link "Maryann Shackelford-Barley" [ref=e230] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e232]
+            - listitem [ref=e236]:
+              - link "Patty McBroom Davis" [ref=e237] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e239]
+            - listitem [ref=e243]:
+              - link "Danny Hodge" [ref=e244] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e246]
+            - listitem [ref=e250]:
+              - link "Jordan Marrs" [ref=e251] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e253]
+            - listitem [ref=e257]:
+              - link "Kalan Andrews" [ref=e258] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e260]
+            - listitem [ref=e264]:
+              - link "Ebk Gavin" [ref=e265] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e267]
+            - listitem [ref=e271]:
+              - link "Dana Renae Alvarado" [ref=e272] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e274]
+            - listitem [ref=e278]:
+              - link "Jimmy Moore" [ref=e279] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e281]
+            - listitem:
+              - link "See everyone" [ref=e285] [cursor=pointer]:
+                - /url: https://www.facebook.com/tysonmediaoutlet/friends_likes/
+                - img [ref=e286]
+    - generic [ref=e296]:
+      - tablist [ref=e304]:
+        - generic:
+          - generic:
+            - generic [ref=e306]:
+              - generic [ref=e307]: More
+              - img [ref=e309]
+            - tab "All" [selected] [ref=e312] [cursor=pointer]:
+              - generic [ref=e314]: All
+            - tab "About" [ref=e316] [cursor=pointer]:
+              - generic [ref=e318]: About
+            - tab "Reels" [ref=e320] [cursor=pointer]:
+              - generic [ref=e322]: Reels
+            - tab "Photos" [ref=e324] [cursor=pointer]:
+              - generic [ref=e326]: Photos
+            - tab "Followers" [ref=e328] [cursor=pointer]:
+              - generic [ref=e330]: Followers
+            - tab "More profile sections" [ref=e332] [cursor=pointer]:
+              - generic [ref=e333]:
+                - generic [ref=e334]: More
+                - img [ref=e336]
+      - button "Profile settings see more options" [ref=e341] [cursor=pointer]:
+        - img [ref=e343]
+    - generic [ref=e349]:
+      - generic [ref=e353]:
+        - generic [ref=e355]:
+          - generic [ref=e359]:
+            - heading "Personal details" [level=2] [ref=e364]:
+              - generic [ref=e365]: Personal details
+            - list "Personal details" [ref=e366]:
+              - button "June 14" [ref=e367] [cursor=pointer]:
+                - generic [ref=e369]:
+                  - img [ref=e371]
+                  - listitem [ref=e372]:
+                    - generic [ref=e374]: June 14
+          - generic [ref=e378]:
+            - heading "Details" [level=2] [ref=e383]:
+              - generic [ref=e384]: Details
+            - list "Details" [ref=e385]:
+              - button "96% recommend (383 Reviews)" [ref=e386] [cursor=pointer]:
+                - generic [ref=e388]:
+                  - img [ref=e390]
+                  - listitem [ref=e391]:
+                    - generic [ref=e393]: 96% recommend (383 Reviews)
+          - generic [ref=e397]:
+            - heading "Communities" [level=2] [ref=e402]:
+              - generic [ref=e403]: Communities
+            - list "Communities" [ref=e404]:
+              - generic [ref=e406]:
+                - img [ref=e408]
+                - listitem [ref=e409]:
+                  - generic [ref=e410]:
+                    - link "Channel 27 News and Entertainment, Grant County" [ref=e413] [cursor=pointer]:
+                      - /url: https://www.facebook.com/tysonmediaoutlet/supporters/?entrypoint_surface=DIRECTORY&surface=directory
+                    - generic [ref=e415]: Subscriber hub
+              - generic [ref=e417]:
+                - img [ref=e419]
+                - listitem [ref=e420]:
+                  - generic [ref=e421]:
+                    - button "Channel 27 Broadcasting" [ref=e424] [cursor=pointer]
+                    - generic [ref=e426]: Channel · 1.2K members
+          - generic [ref=e430]:
+            - heading "Contact info" [level=2] [ref=e435]:
+              - generic [ref=e436]: Contact info
+            - list "Contact info" [ref=e437]:
+              - generic [ref=e439]:
+                - img [ref=e441]
+                - listitem [ref=e442]:
+                  - generic [ref=e444]: (765) 251-5945
+              - generic [ref=e446]:
+                - img [ref=e448]
+                - listitem [ref=e449]:
+                  - link "wmtvchannel27@gmail.com" [ref=e452] [cursor=pointer]:
+                    - /url: mailto:wmtvchannel27@gmail.com
+              - generic [ref=e454]:
+                - img [ref=e456]
+                - listitem [ref=e457]:
+                  - button "Channel 27 News and Entertainment, Grant County" [ref=e459] [cursor=pointer]
+          - generic [ref=e464]:
+            - status "Loading..." [ref=e466]
+            - status "Loading..." [ref=e468]
+            - status "Loading..." [ref=e470]
+            - status "Loading..." [ref=e472]
+        - status "Loading..." [ref=e475]:
+          - list [ref=e482]:
+            - listitem [ref=e483]
+            - listitem [ref=e487]
+            - listitem [ref=e491]
+            - listitem [ref=e495]
+            - listitem [ref=e499]
+            - listitem [ref=e503]
+            - listitem [ref=e507]
+            - listitem [ref=e511]
+            - listitem [ref=e515]
+      - generic [ref=e519]:
+        - generic [ref=e523]:
+          - heading "Posts" [level=2] [ref=e527]:
+            - generic [ref=e528]: Posts
+          - button "Filters" [ref=e532] [cursor=pointer]:
+            - generic [ref=e533]:
+              - img [ref=e534]
+              - generic [ref=e537]: Filters
+        - generic [ref=e538]:
+          - generic [ref=e550]:
+            - blockquote [ref=e552]:
+              - generic [ref=e553]: Facebook
+            - blockquote [ref=e555]:
+              - generic [ref=e556]: Facebook
+            - blockquote [ref=e558]:
+              - generic [ref=e559]: Facebook
+            - blockquote [ref=e561]:
+              - generic [ref=e562]: Facebook
+            - blockquote [ref=e564]:
+              - generic [ref=e565]: Facebook
+            - blockquote [ref=e567]:
+              - generic [ref=e568]: Facebook
+            - blockquote [ref=e570]:
+              - generic [ref=e571]: Facebook
+            - blockquote [ref=e573]:
+              - generic [ref=e574]: Facebook
+            - blockquote [ref=e576]:
+              - generic [ref=e577]: Facebook
+            - blockquote [ref=e579]:
+              - generic [ref=e580]: Facebook
+            - blockquote [ref=e582]:
+              - generic [ref=e583]: Facebook
+            - generic [ref=e586]:
+              - generic:
+                - blockquote [ref=e588]:
+                  - generic [ref=e589]: Facebook
+                - blockquote [ref=e591]:
+                  - generic [ref=e592]: Facebook
+                - blockquote [ref=e594]:
+                  - generic [ref=e595]: Facebook
+                - blockquote [ref=e597]:
+                  - generic [ref=e598]: Facebook
+                - blockquote [ref=e600]:
+                  - generic [ref=e601]: Facebook
+                - blockquote [ref=e603]:
+                  - generic [ref=e604]: Facebook
+                - blockquote [ref=e606]:
+                  - generic [ref=e607]: Facebook
+                - blockquote [ref=e609]:
+                  - generic [ref=e610]: Facebook
+                - blockquote [ref=e612]:
+                  - generic [ref=e613]: Facebook
+                - blockquote [ref=e615]:
+                  - generic [ref=e616]: Facebook
+                - blockquote [ref=e618]:
+                  - generic [ref=e619]: Facebook
+                - blockquote [ref=e621]:
+                  - generic [ref=e622]: Facebook
+                - blockquote [ref=e624]:
+                  - generic [ref=e625]: Facebook
+                - blockquote [ref=e627]:
+                  - generic [ref=e628]: Facebook
+                - blockquote [ref=e630]:
+                  - generic [ref=e631]: Facebook
+                - blockquote [ref=e633]:
+                  - generic [ref=e634]: Facebook
+                - blockquote [ref=e636]:
+                  - generic [ref=e637]: Facebook
+                - blockquote [ref=e639]:
+                  - generic [ref=e640]: Facebook
+                - blockquote [ref=e642]:
+                  - generic [ref=e643]: Facebook
+                - blockquote [ref=e645]:
+                  - generic [ref=e646]: Facebook
+                - blockquote [ref=e648]:
+                  - generic [ref=e649]: Facebook
+                - blockquote [ref=e651]:
+                  - generic [ref=e652]: Facebook
+              - generic [ref=e654]:
+                - link "Channel 27 News and Entertainment, Grant County, view story" [ref=e658] [cursor=pointer]:
+                  - /url: /stories/105499498244438/UzpfSVNDOjIwMzMzNjQyOTM5NjcyNTQ=/?view_single=false&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=%3C%3C%2CP-R
+                  - img "Channel 27 News and Entertainment, Grant County, view story" [ref=e660]
+                - generic [ref=e666]:
+                  - heading "Channel 27 News and Entertainment, Grant County Verified account" [level=2] [ref=e670]:
+                    - generic [ref=e671]:
+                      - link "Channel 27 News and Entertainment, Grant County" [ref=e675] [cursor=pointer]:
+                        - /url: https://www.facebook.com/tysonmediaoutlet?__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=-UC%2CP-R
+                        - generic [ref=e676]: Channel 27 News and Entertainment, Grant County
+                      - img "Verified account" [ref=e680]
+                  - generic [ref=e684]:
+                    - link "o s d e S r t n o p m 6 g 2 l c h l 1 7 m 9 m 0 t g 3 i 1 t c h i t f 4 g 8 l 9 3 l 0 4 m f 9 h f g 3 t i 0 9 9 u 6 a h" [ref=e687] [cursor=pointer]:
+                      - /url: "?__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=%2CO%2CP-R#?jdd"
+                      - generic [ref=e690]:
+                        - generic [ref=e691]: o
+                        - generic [ref=e692]: s
+                        - generic [ref=e693]: d
+                        - generic [ref=e694]: e
+                        - generic [ref=e695]: S
+                        - generic [ref=e696]: r
+                        - generic [ref=e697]: t
+                        - generic [ref=e698]: "n"
+                        - generic [ref=e699]: o
+                        - generic [ref=e700]: p
+                        - generic [ref=e701]: m
+                        - generic [ref=e702]: "6"
+                        - generic [ref=e703]: g
+                        - generic [ref=e704]: "2"
+                        - generic [ref=e705]: l
+                        - generic [ref=e706]: c
+                        - generic [ref=e707]: h
+                        - generic [ref=e708]: l
+                        - generic [ref=e709]: "1"
+                        - generic [ref=e710]: "7"
+                        - generic [ref=e711]: m
+                        - generic [ref=e712]: "9"
+                        - generic [ref=e713]: m
+                        - generic [ref=e714]: "0"
+                        - generic [ref=e715]: t
+                        - generic [ref=e716]: g
+                        - generic [ref=e717]: "3"
+                        - generic [ref=e718]: i
+                        - generic [ref=e719]: "1"
+                        - generic [ref=e720]: t
+                        - generic [ref=e721]: c
+                        - generic [ref=e722]: h
+                        - generic [ref=e723]: i
+                        - generic [ref=e724]: t
+                        - generic [ref=e725]: f
+                        - generic [ref=e726]: "4"
+                        - generic [ref=e727]: g
+                        - generic [ref=e728]: "8"
+                        - generic [ref=e729]: l
+                        - generic [ref=e730]: "9"
+                        - generic [ref=e731]: "3"
+                        - generic [ref=e732]: l
+                        - generic [ref=e733]: "0"
+                        - generic [ref=e734]: "4"
+                        - generic [ref=e735]: m
+                        - generic [ref=e736]: f
+                        - generic [ref=e737]: "9"
+                        - generic [ref=e738]: h
+                        - generic [ref=e739]: f
+                        - generic [ref=e740]: g
+                        - generic [ref=e741]: "3"
+                        - generic [ref=e742]: t
+                        - generic [ref=e743]: i
+                        - generic [ref=e744]: "0"
+                        - generic [ref=e745]: "9"
+                        - generic [ref=e746]: "9"
+                        - generic [ref=e747]: u
+                        - generic [ref=e748]: "6"
+                        - generic [ref=e749]: a
+                        - generic [ref=e750]: h
+                    - generic [ref=e752]: ·
+                    - img "Shared with Public" [ref=e757]
+                - button "Actions for this post by Channel 27 News and Entertainment, Grant County" [ref=e765] [cursor=pointer]:
+                  - img [ref=e766]
+              - generic [ref=e769]:
+                - generic [ref=e776]:
+                  - generic [ref=e778]:
+                    - img "🔧" [ref=e780]
+                    - img "🚙" [ref=e782]
+                    - text: Experienced Mechanic Wanted at
+                    - link "Shrout's Auto & Towing" [ref=e784] [cursor=pointer]:
+                      - /url: https://www.facebook.com/shrouts?__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=-]K-R
+                      - generic [ref=e786]: Shrout's Auto & Towing
+                    - img "🚙" [ref=e788]
+                    - img "🔧" [ref=e790]
+                  - generic [ref=e792]:
+                    - text: If …
+                    - button "See more" [ref=e793] [cursor=pointer]
+                - link "No photo description available." [ref=e796] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photo/?fbid=1650487683745604&set=a.730644799063235&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=EH-R
+                  - img "No photo description available." [ref=e801]
+              - generic [ref=e804]:
+                - generic [ref=e808]:
+                  - generic [ref=e809]:
+                    - button "Like" [ref=e810] [cursor=pointer]:
+                      - generic [ref=e816]: "1"
+                    - button "React" [ref=e817] [cursor=pointer]:
+                      - img [ref=e818]
+                  - button "Leave a comment" [ref=e821] [cursor=pointer]:
+                    - generic [ref=e826]: "1"
+                  - button "Send this to friends or post it on your profile." [ref=e828] [cursor=pointer]:
+                    - generic [ref=e833]: "1"
+                  - toolbar "See who reacted to this" [ref=e835]:
+                    - 'button "Like: 1 person" [ref=e840] [cursor=pointer]'
+                - generic [ref=e841]:
+                  - article "Comment by Channel 27 News and Entertainment, Grant County 9 hours ago" [ref=e845]:
+                    - link [ref=e849] [cursor=pointer]:
+                      - /url: https://www.facebook.com/tysonmediaoutlet?comment_id=Y29tbWVudDoxNjUwNDg3OTEwNDEyMjQ4XzE3NjcyMzk5ODc3Njk5Mzg%3D&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=R-R
+                      - img [ref=e851]
+                    - generic [ref=e855]:
+                      - generic [ref=e856]:
+                        - generic [ref=e859]:
+                          - button "View information about identity badges" [ref=e860] [cursor=pointer]:
+                            - generic [ref=e862]: Author
+                          - link "Channel 27 News and Entertainment, Grant County" [ref=e865] [cursor=pointer]:
+                            - /url: https://www.facebook.com/tysonmediaoutlet?comment_id=Y29tbWVudDoxNjUwNDg3OTEwNDEyMjQ4XzE3NjcyMzk5ODc3Njk5Mzg%3D&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=R-R
+                            - generic [ref=e867]: Channel 27 News and Entertainment, Grant County
+                          - generic [ref=e871]:
+                            - text: Support Channel 27 by clicking the subscriber button!!
+                            - link "https://www.facebook.com/tysonmediaoutlet/subscribenow..." [ref=e872] [cursor=pointer]:
+                              - /url: https://www.facebook.com/tysonmediaoutlet/subscribenow?surface=pinned_comments&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=R-R
+                        - button "Hide or report this" [ref=e877] [cursor=pointer]:
+                          - img [ref=e878]
+                      - generic [ref=e882]:
+                        - generic:
+                          - img "Subscribe to Channel 27 News and Entertainment, Grant County"
+                        - generic [ref=e883]:
+                          - generic [ref=e887]: Subscribe to Channel 27 News and Entertainment, Grant County
+                          - link "Subscribe to Channel 27 News and Entertainment, Grant County" [ref=e888] [cursor=pointer]:
+                            - /url: https://www.facebook.com/tysonmediaoutlet/subscribenow?surface=pinned_comments&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=R-R
+                            - heading "Subscribe to Channel 27 News and Entertainment, Grant County" [level=2] [ref=e889]
+                      - list [ref=e891]:
+                        - listitem [ref=e892]:
+                          - link "9h" [ref=e895] [cursor=pointer]:
+                            - /url: https://www.facebook.com/tysonmediaoutlet/posts/pfbid02aim6NCaBHrNMQooNGWQG4cDPBG7tv8fVAEHLBTLtGtSRgLWgENNAi4ms8Eb6v4Lel?comment_id=1767239987769938&__cft__[0]=AZa64zOjzzoxN0tLdNgcIO8PkodnKbJXh9IwfyeWG3ZoocF4Kg6LsNeskD5JwXOLAMUl7emEC6lKJmoxJHcR7LHSPQoq7XcCB6DG9MKl5r58dQzrR6sLsQJSAb_FXGANAx0O5LwnmPnoCDcQ0cl0QcknWx4n7OYAqq4hwO9EMF_fcVieBvcDwEIJr3yNYPzlxtI&__tn__=R-R
+                        - listitem [ref=e896]:
+                          - generic [ref=e899]:
+                            - button "Like" [ref=e901] [cursor=pointer]:
+                              - generic [ref=e902]: Like
+                            - button "React" [ref=e903] [cursor=pointer]
+                        - listitem [ref=e905]:
+                          - button "Reply" [ref=e907] [cursor=pointer]
+                  - generic [ref=e913]:
+                    - button "Available Voices, switch profile" [ref=e915] [cursor=pointer]:
+                      - generic [ref=e916]:
+                        - img [ref=e917]
+                        - img [ref=e924]
+                    - generic [ref=e929]:
+                      - generic [ref=e933]:
+                        - textbox "Comment as Raedon Mcbroom" [ref=e934]:
+                          - paragraph [ref=e935]
+                        - generic: Comment as Raedon Mcbroom
+                      - list [ref=e937]:
+                        - listitem [ref=e938]:
+                          - button "Give Stars" [ref=e941] [cursor=pointer]:
+                            - img [ref=e942]
+                        - listitem [ref=e945]:
+                          - button "Comment with an avatar sticker" [ref=e947] [cursor=pointer]
+                        - listitem [ref=e949]:
+                          - button "Insert an emoji" [ref=e951] [cursor=pointer]:
+                            - img [ref=e952]
+                        - listitem [ref=e955]:
+                          - button "Attach a photo or video" [ref=e957] [cursor=pointer]
+                        - listitem [ref=e959]:
+                          - button "Comment with a GIF" [ref=e961] [cursor=pointer]
+                        - listitem [ref=e963]:
+                          - button "Comment with a sticker" [ref=e965] [cursor=pointer]
+            - blockquote [ref=e968]:
+              - generic [ref=e969]: Facebook
+            - blockquote [ref=e971]:
+              - generic [ref=e972]: Facebook
+            - blockquote [ref=e974]:
+              - generic [ref=e975]: Facebook
+            - blockquote [ref=e977]:
+              - generic [ref=e978]: Facebook
+            - blockquote [ref=e980]:
+              - generic [ref=e981]: Facebook
+            - blockquote [ref=e983]:
+              - generic [ref=e984]: Facebook
+            - blockquote [ref=e986]:
+              - generic [ref=e987]: Facebook
+            - blockquote [ref=e989]:
+              - generic [ref=e990]: Facebook
+            - blockquote [ref=e992]:
+              - generic [ref=e993]: Facebook
+            - blockquote [ref=e995]:
+              - generic [ref=e996]: Facebook
+            - blockquote [ref=e998]:
+              - generic [ref=e999]: Facebook
+          - generic [ref=e1001]:
+            - article [ref=e1002]:
+              - status "Loading..." [ref=e1003]
+            - article [ref=e1016]:
+              - status "Loading..." [ref=e1017]
