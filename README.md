@@ -135,7 +135,103 @@ so updating the nav or footer in that one file changes the whole site.
 
 ---
 
-## 6. Good to know
+## 7. Facebook Page Posts — Public Mode (no login required)
+
+If you just want to display posts from **any public Facebook page** (yours or someone else's),
+you don't need users to log in. The site uses a Facebook App token server-side to pull public
+page data.
+
+**Requirements:**
+- A Facebook App (App ID + App Secret) — anyone with a Facebook account can create one
+- The page must be **public**
+
+**Setup:**
+1. Create a Facebook App (see Section 8 below)
+2. In your Cloudflare Pages dashboard, set these environment variables:
+   - `FB_APP_ID` = your Facebook App ID
+   - `FB_APP_SECRET` = your Facebook App Secret (set as **secret**)
+   - `FB_REDIRECT_URI` = `https://channel-27-news.pages.dev/api/auth/callback`
+3. In `js/config.js`, paste your `appId`:
+   ```js
+   auth: { appId: "1234567890", showConnectButton: true, apiBase: "" }
+   ```
+4. The site automatically fetches posts from the Facebook page URL in `facebook.fanPageUrl`
+   using the App token. No user login needed.
+
+---
+
+## 8. Facebook Page OAuth — "Connect Page" Mode (optional)
+
+Want users to **log in with their own Facebook Page** and see their own posts? The site
+includes a full OAuth flow using Cloudflare Pages Functions.
+
+### 8a. Create a Facebook App
+
+1. Go to [developers.facebook.com](https://developers.facebook.com)
+2. Click **My Apps** → **Create App**
+3. Choose **Business** (or Consumer — both work)
+4. Fill in App Name (e.g., "Channel 27"), contact email, and click **Create App**
+5. In the dashboard, click **Add Product** → **Facebook Login** → **Set Up**
+6. Choose **Web** as the platform
+7. Set the Site URL to `https://channel-27-news.pages.dev`
+8. Go to **Facebook Login** → **Settings** in the sidebar
+9. Set **Valid OAuth Redirect URIs** to:
+   ```
+   https://channel-27-news.pages.dev/api/auth/callback
+   ```
+10. Go to **App Review** → **Permissions and Features** and request:
+    - `pages_read_engagement`
+    - `pages_show_list`
+    - `pages_read_user_content`
+11. Go to **Settings** → **Basic** and note your **App ID** and **App Secret**
+
+### 8b. Set Environment Variables
+
+In your Cloudflare Pages dashboard → Settings → Environment variables:
+
+| Name | Value | Type |
+|------|-------|------|
+| `FB_APP_ID` | Your Facebook App ID | Plain text |
+| `FB_APP_SECRET` | Your Facebook App Secret | **Secret** |
+| `FB_REDIRECT_URI` | `https://channel-27-news.pages.dev/api/auth/callback` | Plain text |
+
+### 8c. Configure the Site
+
+In `js/config.js`, set your App ID:
+```js
+auth: { appId: "1234567890", showConnectButton: true, apiBase: "" }
+```
+
+### 8d. Deploy
+
+Push to `main` branch or trigger a deploy in Cloudflare Pages. The "Connect Page" button
+appears in the header. When clicked, it redirects to Facebook OAuth. After approval, the
+site fetches the user's Facebook Page posts dynamically.
+
+### 8e. App Review (for public users)
+
+Your app starts in **Development mode** — only you (the app creator) can log in. To let
+other Facebook users connect their pages, submit for **App Review** in the Facebook
+developer dashboard. For basic display of public posts, review is often quick.
+
+---
+
+## 9. How the API Works
+
+```
+/api/auth/login    → Redirects to Facebook OAuth dialog
+/api/auth/callback → Facebook redirects here; exchanges code for token; stores in KV
+/api/auth/status   → Returns { authenticated, pageName, pageId } for current session
+/api/auth/logout   → Clears session cookie + KV entry
+/api/posts         → Fetches posts from Facebook Graph API (auth or public mode)
+```
+
+**Public mode:** `/api/posts?pageUrl=https://facebook.com/YourPage` uses the app token.
+**Auth mode:** `/api/posts` reads the page token from the session cookie → KV.
+
+---
+
+**Good to know** (continued)
 
 - **Performance:** images are compressed, the hero image is preloaded, and the Facebook SDK is
   **lazy-loaded** only when the feed scrolls into view (with an 8-second timeout → graceful
