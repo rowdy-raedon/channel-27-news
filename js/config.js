@@ -25,7 +25,8 @@ window.C27_CONFIG = {
   /* ---- Auth (Facebook Page OAuth) ---- */
   auth: {
     // Facebook App ID — set this after creating your Facebook App.
-    // When empty, the "Connect Page" button is hidden.
+    // When empty, the "Connect Page" button is hidden and existing
+    // Facebook Page Plugin / embed fallback is used.
     appId: "",
     // Set to false to hide the connect button even when appId is set.
     showConnectButton: true,
