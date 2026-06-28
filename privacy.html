@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Channel 27 News &amp; Entertainment</title>
+  <meta name="description" content="Privacy Policy for the Channel 27 News & Entertainment website.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0712">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="privacy">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy <span class="text-gold">Policy</span></h1>
+        <div class="rule"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+          <p class="updated">Last updated: <span data-updated>2026</span></p>
+
+          <p>This Privacy Policy explains how Channel 27 News &amp; Entertainment (“Channel 27,” “we,” “us”) handles information when you visit this website. We aim to keep things simple: this is a small site whose main job is to share content from our Facebook page.</p>
+
+          <h2>Information We Collect</h2>
+          <p>We do not require you to create an account, and we do not sell your information. The only information you actively give us comes from the contact form — your name, email address, optional phone number, subject, and message. We use those details solely to read and respond to your message.</p>
+
+          <h2>Facebook Content &amp; Embeds</h2>
+          <p>This site displays posts and videos from our Facebook page using Facebook’s official embed tools. When those embeds load, Facebook may set its own cookies and collect data according to Facebook’s own policies, which we do not control. Your use of Facebook is governed by <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Facebook’s Privacy Policy</a>.</p>
+
+          <h2>Cookies &amp; Analytics</h2>
+          <p>The Channel 27 site itself does not set advertising cookies. If we add analytics in the future to understand general traffic, we will update this page to describe it.</p>
+
+          <h2>How We Use Information</h2>
+          <ul>
+            <li>To respond to messages you send through the contact form.</li>
+            <li>To operate, maintain, and improve the website.</li>
+            <li>To comply with legal obligations where applicable.</li>
+          </ul>
+
+          <h2>Sharing</h2>
+          <p>We don’t share contact-form information with third parties except as needed to deliver your message to us (for example, an email or form-handling service) or where required by law.</p>
+
+          <h2>Your Choices</h2>
+          <p>You can choose not to use the contact form and instead reach us directly on Facebook. If you’ve sent us a message and want it deleted from our inbox, just ask.</p>
+
+          <h2>Contact</h2>
+          <p>Questions about this policy? Email us at <a data-email-link href="#"><span data-email>tysonmedia27@gmail.com</span></a> or message us on <a data-fb-link href="#" target="_blank" rel="noopener">Facebook</a>.</p>
+
+          <p class="updated" style="margin-top:28px">This template is provided as a starting point and should be reviewed to ensure it fits your specific practices and local requirements.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    (function () {
+      var c = C27_CONFIG;
+      var em = document.querySelector("[data-email-link]"); if (em) em.href = "mailto:" + c.contact.email;
+      var emt = document.querySelector("[data-email]"); if (emt) emt.textContent = c.contact.email;
+      var fb = document.querySelector("[data-fb-link]"); if (fb) fb.href = c.facebook.fanPageUrl;
+      var yr = document.querySelector("[data-updated]"); if (yr) yr.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

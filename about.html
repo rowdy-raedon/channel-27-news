@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Channel 27 News &amp; Entertainment</title>
+  <meta name="description" content="Channel 27 News & Entertainment (Tyson Media) delivers reliable news, engaging stories, community updates, interviews, and original programming.">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0712">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy">
+            <span class="eyebrow">Who we are</span>
+            <h1 style="font-size:clamp(34px,5.5vw,54px);text-transform:uppercase;margin-top:14px">
+              About <span class="text-gold">Channel 27</span>
+            </h1>
+            <div class="rule" style="width:64px;height:4px;border-radius:4px;margin-top:18px;background:linear-gradient(90deg,var(--gold),var(--gold-deep));box-shadow:0 0 18px var(--gold-glow)"></div>
+            <p>Channel 27 News &amp; Entertainment is dedicated to delivering reliable news, engaging stories, community updates, interviews, entertainment, and original programming.</p>
+            <p>Our mission is to keep viewers informed, inspired, and connected through content that matters.</p>
+
+            <div class="about-stats">
+              <div class="stat"><div class="num">24/7</div><div class="lbl">Updates &amp; Coverage</div></div>
+              <div class="stat"><div class="num">Local</div><div class="lbl">Community First</div></div>
+              <div class="stat"><div class="num">Live</div><div class="lbl">Streaming on Facebook</div></div>
+            </div>
+
+            <a class="btn btn-fb btn-lg" id="follow-fb" href="#" target="_blank" rel="noopener" style="margin-top:30px">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.25h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+              <span>Follow Us on Facebook</span>
+            </a>
+          </div>
+
+          <div class="host-panel">
+            <span class="panel-badge">On Channel 27</span>
+            <img src="assets/host.png" alt="Channel 27 host in the studio" width="904" height="852" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    document.getElementById("follow-fb").href = C27_CONFIG.facebook.fanPageUrl;
+  </script>
+</body>
+</html>

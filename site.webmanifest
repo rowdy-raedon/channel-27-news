@@ -1,0 +1,15 @@
+{
+  "name": "Channel 27 News & Entertainment",
+  "short_name": "Channel 27",
+  "description": "Your source for news & entertainment. Watch live and follow the latest from our Facebook page.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0712",
+  "theme_color": "#0a0712",
+  "icons": [
+    { "src": "assets/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

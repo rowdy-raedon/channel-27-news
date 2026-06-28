@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use — Channel 27 News &amp; Entertainment</title>
+  <meta name="description" content="Terms of Use for the Channel 27 News & Entertainment website.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0712">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="terms">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Terms of <span class="text-gold">Use</span></h1>
+        <div class="rule"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+          <p class="updated">Last updated: <span data-updated>2026</span></p>
+
+          <p>By using the Channel 27 News &amp; Entertainment website, you agree to these Terms of Use. If you don’t agree, please don’t use the site.</p>
+
+          <h2>Use of the Site</h2>
+          <p>You may browse and share our content for personal, non-commercial use. Please don’t use the site in any way that’s unlawful, harmful, or that interferes with its normal operation.</p>
+
+          <h2>Content &amp; Ownership</h2>
+          <p>The Channel 27 name, logo, and original material are owned by Channel 27 (Tyson Media). Posts and videos shown here are embedded from our Facebook page and remain subject to Facebook’s terms. We make no guarantee that embedded content will always be available, as it can be changed or removed on Facebook at any time.</p>
+
+          <h2>Third-Party Links &amp; Embeds</h2>
+          <p>This site links to and embeds content from Facebook and may link to other third-party sites. We’re not responsible for the content, policies, or practices of those services. Your use of Facebook is governed by <a href="https://www.facebook.com/terms.php" target="_blank" rel="noopener">Facebook’s Terms</a>.</p>
+
+          <h2>Accuracy of Information</h2>
+          <p>We work to share timely, reliable updates, but content is provided “as is” without warranties of any kind. News and entertainment content reflects the views expressed in the original posts and may be updated or corrected over time.</p>
+
+          <h2>Limitation of Liability</h2>
+          <p>To the fullest extent allowed by law, Channel 27 is not liable for any damages arising from your use of, or inability to use, this website or any content on it.</p>
+
+          <h2>Changes</h2>
+          <p>We may update these Terms from time to time. Continued use of the site after changes are posted means you accept the updated Terms.</p>
+
+          <h2>Contact</h2>
+          <p>Questions about these Terms? Email <a data-email-link href="#"><span data-email>tysonmedia27@gmail.com</span></a> or reach us on <a data-fb-link href="#" target="_blank" rel="noopener">Facebook</a>.</p>
+
+          <p class="updated" style="margin-top:28px">This template is provided as a starting point and should be reviewed to ensure it fits your specific needs and local requirements.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    (function () {
+      var c = C27_CONFIG;
+      var em = document.querySelector("[data-email-link]"); if (em) em.href = "mailto:" + c.contact.email;
+      var emt = document.querySelector("[data-email]"); if (emt) emt.textContent = c.contact.email;
+      var fb = document.querySelector("[data-fb-link]"); if (fb) fb.href = c.facebook.fanPageUrl;
+      var yr = document.querySelector("[data-updated]"); if (yr) yr.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

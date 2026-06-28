@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post — Channel 27 News &amp; Entertainment</title>
+  <meta name="description" content="A featured post from Channel 27 News & Entertainment on Facebook.">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0712">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="post">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <a class="back-link" href="posts.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          Back to All Posts
+        </a>
+
+        <div class="single-layout">
+          <!-- MAIN POST -->
+          <article class="single-main" id="single-embed" aria-live="polite">
+            <!-- Facebook embed is injected here by main.js -->
+          </article>
+
+          <!-- SIDEBAR -->
+          <aside class="single-sidebar">
+            <div class="sidebar-card follow">
+              <h3>Follow Channel 27</h3>
+              <p>Get every post, video, and live stream the moment it goes up.</p>
+              <a class="btn btn-fb" data-fb-link href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.25h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+                <span>Follow on Facebook</span>
+              </a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Watch Live</h3>
+              <p style="color:var(--muted);font-size:15px;margin-bottom:18px">Catch Channel 27 streaming live on Facebook.</p>
+              <a class="btn btn-gold-outline watch-live" data-watch-live href="#" target="_blank" rel="noopener" style="width:100%">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Watch Live</span>
+              </a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Recent Posts</h3>
+              <div class="recent-list" id="recent-list"></div>
+            </div>
+
+            <a class="back-link" href="posts.html" style="margin:0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              Back to All Posts
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var c = C27_CONFIG;
+      document.querySelectorAll("[data-fb-link]").forEach(function (a) { a.href = c.facebook.fanPageUrl; });
+      document.querySelectorAll("[data-watch-live]").forEach(function (a) { a.href = c.facebook.watchLiveUrl; });
+    })();
+  </script>
+</body>
+</html>
