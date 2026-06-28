@@ -247,9 +247,9 @@
     const limit = opts.limit || 8;
 
     // Show skeleton placeholders immediately
-    host.classList.add("feed-grid");
-    host.classList.toggle("cols-3", cols === 3);
-    const skelCount = Math.min(limit, 4);
+    const isList = host.classList.contains("feed-list");
+    if (!isList) { host.classList.add("feed-grid"); host.classList.toggle("cols-3", cols === 3); }
+    const skelCount = Math.min(limit, isList ? limit : 4);
     host.innerHTML = Array.from({ length: skelCount }, skeletonCard).join("");
 
     try {
@@ -436,10 +436,10 @@
   function lazyFeed(host, opts) {
     if (!host) return;
     // Initial skeletons so there is immediate visual feedback.
+    var isList2 = host.classList.contains("feed-list");
     if ((CFG.posts || []).length > 0) {
-      host.classList.add("feed-grid");
-      host.classList.toggle("cols-3", (opts.cols || 4) === 3);
-      const n = opts.limit || 4;
+      if (!isList2) { host.classList.add("feed-grid"); host.classList.toggle("cols-3", (opts.cols || 4) === 3); }
+      var n = opts.limit || 4;
       host.innerHTML = Array.from({ length: Math.min(n, (CFG.posts || []).length) }, skeletonCard).join("");
     } else {
       host.innerHTML = `<div class="fb-live-frame" style="min-height:320px;display:grid;place-items:center;color:var(--muted-2)">Loading feed…</div>`;
