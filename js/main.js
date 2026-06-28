@@ -188,6 +188,21 @@
 
   function buildFeed(host, opts) {
     opts = opts || {};
+
+    // Check if user is authenticated — use dynamic API feed
+    if (window.C27_AUTH) {
+      const authState = window.C27_AUTH.getStatus();
+      if (authState.authenticated && authState.pageId) {
+        return buildDynamicFeed(host, opts);
+      }
+    }
+
+    // If facebook page URL is configured, try public API mode
+    const fanPageUrl = CFG.facebook && CFG.facebook.fanPageUrl;
+    if (fanPageUrl && (CFG.auth && CFG.auth.appId)) {
+      return buildDynamicFeed(host, Object.assign({}, opts, { pageUrl: fanPageUrl }));
+    }
+
     const cols = opts.cols || 4;
     const filter = opts.filter || "all";
     const limit = opts.limit || null;
@@ -223,6 +238,167 @@
 
     loadAndParse(host, () => host.querySelectorAll(".post-card").forEach(watchCard));
     updateLoadMore(host, limit);
+  }
+
+  /* ---- Dynamic feed: fetch posts from our API (authenticated or public) ---- */
+  async function buildDynamicFeed(host, opts) {
+    const cols = opts.cols || 4;
+    const filter = opts.filter || "all";
+    const limit = opts.limit || 8;
+
+    // Show skeleton placeholders immediately
+    host.classList.add("feed-grid");
+    host.classList.toggle("cols-3", cols === 3);
+    const skelCount = Math.min(limit, 4);
+    host.innerHTML = Array.from({ length: skelCount }, skeletonCard).join("");
+
+    try {
+      const API_BASE = (CFG.auth && CFG.auth.apiBase) || "";
+      var params = "limit=" + limit;
+      if (opts.pageUrl) {
+        params += "&pageUrl=" + encodeURIComponent(opts.pageUrl);
+      }
+      const url = API_BASE + "/api/posts?" + params;
+      const res = await fetch(url, { credentials: "include" });
+
+      if (!res.ok) {
+        if (res.status === 401) {
+          host.innerHTML = authExpiredState();
+        } else {
+          host.innerHTML = errorState();
+        }
+        return;
+      }
+
+      const data = await res.json();
+      if (data.error) {
+        if (data.error === "not_authenticated" || data.error === "session_expired") {
+          host.innerHTML = authExpiredState();
+        } else {
+          host.innerHTML = errorState();
+        }
+        return;
+      }
+
+      let posts = data.posts || [];
+      if (filter !== "all") {
+        posts = posts.filter(function (p) {
+          return p.type === filter || (filter === "video" && p.type === "live");
+        });
+      }
+
+      if (posts.length === 0) {
+        host.innerHTML = emptyState(labelFor(filter));
+        return;
+      }
+
+      // Convert API posts to embed-compatible format
+      const embedPosts = posts.map(function (p) {
+        return { href: p.permalink_url, type: p.type };
+      });
+
+      host._all = embedPosts;
+      host._shown = embedPosts.length;
+      host._rawPaging = data.paging;
+      host._dynamicFilter = filter;
+      host._dynamicLimit = limit;
+      host._dynamicPageUrl = opts.pageUrl || "";
+
+      host.innerHTML = embedPosts.map(embedCard).join("");
+      loadAndParse(host, function () {
+        host.querySelectorAll(".post-card").forEach(watchCard);
+      });
+      updateDynamicLoadMore(host);
+    } catch (e) {
+      host.innerHTML = errorState();
+    }
+  }
+
+  function authExpiredState() {
+    return (
+      '<div class="feed-state">' +
+      '<div class="ico">' +
+      (ICON.facebook || "") +
+      "</div>" +
+      "<h3>Session expired</h3>" +
+      "<p>Your Facebook connection has expired. Reconnect to see your latest posts.</p>" +
+      '<button class="btn btn-fb" onclick="C27_AUTH.login()">' +
+      (ICON.facebook || "") +
+      "<span>Reconnect Facebook Page</span>" +
+      "</button>" +
+      "</div>"
+    );
+  }
+
+  function updateDynamicLoadMore(host) {
+    const moreWrap = document.querySelector("[data-loadmore]");
+    if (!moreWrap) return;
+    const paging = host._rawPaging;
+    if (paging && paging.next) {
+      moreWrap.hidden = false;
+      const btn = moreWrap.querySelector("button");
+      btn.onclick = function () {
+        loadMoreFromApi(host);
+      };
+    } else {
+      moreWrap.hidden = true;
+    }
+  }
+
+  async function loadMoreFromApi(host) {
+    const paging = host._rawPaging;
+    if (!paging || !paging.next) return;
+
+    const moreWrap = document.querySelector("[data-loadmore]");
+    if (moreWrap) moreWrap.hidden = true;
+
+    try {
+      const afterUrl = paging.cursors ? paging.cursors.after : "";
+      if (!afterUrl) return;
+
+      const API_BASE = (CFG.auth && CFG.auth.apiBase) || "";
+      var params = "limit=" + (host._dynamicLimit || 8) + "&after=" + afterUrl;
+      if (host._dynamicPageUrl) {
+        params += "&pageUrl=" + encodeURIComponent(host._dynamicPageUrl);
+      }
+      const url = API_BASE + "/api/posts?" + params;
+      const res = await fetch(url, { credentials: "include" });
+
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.error) return;
+
+      let posts = data.posts || [];
+      const filter = host._dynamicFilter || "all";
+      if (filter !== "all") {
+        posts = posts.filter(function (p) {
+          return p.type === filter || (filter === "video" && p.type === "live");
+        });
+      }
+
+      const newEmbeds = posts.map(function (p) {
+        return { href: p.permalink_url, type: p.type };
+      });
+
+      host._all = (host._all || []).concat(newEmbeds);
+      host._shown = host._all.length;
+      host._rawPaging = data.paging;
+
+      // Append new cards to the DOM
+      const frag = document.createElement("div");
+      frag.innerHTML = newEmbeds.map(embedCard).join("");
+      while (frag.firstChild) {
+        host.appendChild(frag.firstChild);
+      }
+
+      loadAndParse(host, function () {
+        host.querySelectorAll(".post-card").forEach(watchCard);
+      });
+      updateDynamicLoadMore(host);
+    } catch (e) {
+      // Keep existing content on error
+      if (moreWrap) moreWrap.hidden = false;
+    }
   }
 
   function labelFor(f) {

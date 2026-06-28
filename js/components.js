@@ -64,6 +64,7 @@
         ${brandLockup}
         <nav class="nav" aria-label="Primary">${links}</nav>
         <div class="header-actions">
+          <div id="auth-slot" class="auth-slot"></div>
           ${watchLiveBtn("watch-live-desktop")}
           <a class="icon-fb" href="${FB.fanPageUrl}" target="_blank" rel="noopener" aria-label="Channel 27 on Facebook">${ICON.facebook}</a>
           <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -76,6 +77,7 @@
         <div class="mm-actions">
           ${watchLiveBtn("")}
           <a class="btn btn-fb" href="${FB.fanPageUrl}" target="_blank" rel="noopener">${ICON.facebook}<span>Facebook Page</span></a>
+          <div id="auth-slot-mobile" class="auth-slot auth-slot-mobile"></div>
         </div>
       </div>
     </header>`;

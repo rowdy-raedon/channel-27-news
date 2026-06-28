@@ -22,6 +22,18 @@ window.C27_CONFIG = {
   siteName: "Channel 27 News & Entertainment",
   tagline: "Your Source for News & Entertainment",
 
+  /* ---- Auth (Facebook Page OAuth) ---- */
+  auth: {
+    // Facebook App ID — set this after creating your Facebook App.
+    // When empty, the "Connect Page" button is hidden.
+    appId: "",
+    // Set to false to hide the connect button even when appId is set.
+    showConnectButton: true,
+    // API base URL for Cloudflare Pages Functions.
+    // Leave empty ("") to use the same origin (recommended for production).
+    apiBase: "",
+  },
+
   /* ---- Facebook ---- */
   facebook: {
     fanPageUrl: "https://www.facebook.com/tysonmediaoutlet",
