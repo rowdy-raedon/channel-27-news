@@ -1,0 +1,17 @@
+# Channel 27 News — Cloudflare Pages config
+name = "channel-27-news"
+compatibility_date = "2026-06-28"
+pages_build_output_dir = "."
+
+# KV namespace for OAuth token storage
+[[kv_namespaces]]
+binding = "C27_AUTH"
+id = "bf494f4701a34f9791681ec7e25702b2"
+
+# Environment variables (non-secret)
+[vars]
+FB_APP_ID = "PLACEHOLDER_APP_ID"
+FB_REDIRECT_URI = "https://channel-27-news.pages.dev/api/auth/callback"
+
+# Secrets — set via: npx wrangler secret put FB_APP_SECRET
+# FB_APP_SECRET must be set for Facebook Graph API to work
